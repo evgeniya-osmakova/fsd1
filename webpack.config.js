@@ -1,14 +1,10 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.pug',
-  output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'result.js',
-  },
+  entry: './src/UI_kit/colors_and_type/colors_and_type.pug',
   module: {
     rules: [
       {
@@ -25,10 +21,6 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: ['file-loader'],
       },
@@ -43,7 +35,7 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'MiniCssExtractPlugin.loader',
+          // 'MiniCssExtractPlugin.loader',
           'style-loader',
           'css-loader',
           'sass-loader',
@@ -53,10 +45,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.pug',
+      template: './src/UI_kit/colors_and_type/colors_and_type.pug',
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: '[name].css',
+    // }),
   ],
 };

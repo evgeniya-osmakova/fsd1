@@ -1,10 +1,24 @@
+mixin color(color, hex, opacity)
+  - color_opacity = opacity || 100
+  .color_wrapper
+    .color_wrapper__demo(style={ background: hex, opacity: color_opacity })
+    .color_wrapper__data
+      h1= color + opacity + '%'
+      p= hex
+
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta (name="viewport», content="width=device-width, initial-scale=1.0»)
-        meta (http-equiv="X-UA-Compatible», content="IE=edge»)
-        title Document
-        block scripts
-            script(src='/jquery.js')
-    body
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title Document
+    style
+      include colors_and_type.scss
+  body
+    .container
+      .container__colors
+        - const color_data = [{ name: 'Dark Shade', hex: '#1F2041', opacity: 100 },{ name: 'Dark Shade', hex: '#1F2041', opacity: 75 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 50 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 25 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 5 }, { name: 'Purple', hex: '#BC9CFF' }, { name: 'Green', hex: '#6FCF97' }]
+        each color in color_data
+          +color(color.name, color.hex, color.opacity)
+      .container__text_types

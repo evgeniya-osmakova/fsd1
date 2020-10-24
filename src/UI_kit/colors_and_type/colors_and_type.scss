@@ -1,0 +1,34 @@
+//@import './blocks/color/color.scss';
+
+.color_wrapper {
+  display: flex;
+}
+
+.color_wrapper__demo {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+
+.color_wrapper__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.container__colors {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container__text_types {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,1 +1,16 @@
+.color_wrapper {
+  display: flex;
+}
 
+  &__demo {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
