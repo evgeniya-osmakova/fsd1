@@ -1,9 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: '/src/UI_kit/colors_and_type/colors_and_type.pug',
+    entry: '/main.js',
   module: {
     rules: [
       {
@@ -24,20 +25,25 @@ module.exports = {
         use: ['file-loader'],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        exclude: [path.resolve(__dirname, 'src/fonts')],
-        include: [
-          path.resolve(__dirname, '/src/fonts/quicksand'),
-          path.resolve(__dirname, 'node_modules'),
-        ],
+        test: /\.(woff|ttf|eot|svg)$/,
         use: ['file-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
@@ -47,6 +53,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: '/src/UI_kit/colors_and_type/colors_and_type.pug',
     }),
