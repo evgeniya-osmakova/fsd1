@@ -1,7 +1,0 @@
-mixin color(color, hex, opacity)
-  - color_opacity = opacity || 100
-  .color_wrapper
-    .color_wrapper__demo(style={ background: hex, opacity: color_opacity })
-    .color_wrapper__data
-      h1= color + ' ' + opacity + '%'
-      p= hex

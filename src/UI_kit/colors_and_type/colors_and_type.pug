@@ -1,10 +1,13 @@
 mixin color(color, hex, opacity)
-  - color_opacity = opacity || 100
+  - const color_opacity = opacity / 100 || 1
   .color_wrapper
     .color_wrapper__demo(style={ background: hex, opacity: color_opacity })
     .color_wrapper__data
-      h1= color + opacity + '%'
-      p= hex
+      - const header = (opacity) ? color + ' ' + opacity + '%' : color
+        h2= header
+        .hex #{hex}
+
+- const color_data = [{ name: 'Dark Shade', hex: '#1F2041', opacity: 100 },{ name: 'Dark Shade', hex: '#1F2041', opacity: 75 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 50 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 25 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 5 }, { name: 'Purple', hex: '#BC9CFF' }, { name: 'Green', hex: '#6FCF97' }]
 
 doctype html
 html(lang="en")
@@ -18,7 +21,6 @@ html(lang="en")
   body
     .container
       .container__colors
-        - const color_data = [{ name: 'Dark Shade', hex: '#1F2041', opacity: 100 },{ name: 'Dark Shade', hex: '#1F2041', opacity: 75 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 50 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 25 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 5 }, { name: 'Purple', hex: '#BC9CFF' }, { name: 'Green', hex: '#6FCF97' }]
         each color in color_data
           +color(color.name, color.hex, color.opacity)
       .container__text_types
