@@ -1,18 +1,15 @@
-@import '../../fonts/fonts';
-
-body {
-  font-family: quicksand;
-}
+@import '/src/fonts/fonts.scss';
 
 .container {
-  margin-top: 120px;
+  //margin-top: 120px;
   display: flex;
   justify-content: space-around;
-}
-.container__colors {
-  display: flex;
-  row-gap: 4px;
-  flex-direction: column;
+
+  &__colors {
+    display: flex;
+    row-gap: 4px;
+    flex-direction: column;
+  }
 }
 
 .container__text_types {
@@ -33,6 +30,7 @@ body {
 }
 
 .color_wrapper__data {
+  font-family: 'Quicksand';
   row-gap: 1px;
   column-gap: 2px;
   flex-direction: column;

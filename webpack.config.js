@@ -1,15 +1,9 @@
 const path = require('path');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/UI_kit/colors_and_type/colors_and_type.pug',
-  output: {
-    filename: 'result.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  entry: '/src/UI_kit/colors_and_type/colors_and_type.pug',
   module: {
     rules: [
       {
@@ -31,8 +25,9 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)$/,
+        exclude: [path.resolve(__dirname, 'src/fonts')],
         include: [
-          path.resolve(__dirname, 'src/fonts'),
+          path.resolve(__dirname, '/src/fonts/quicksand'),
           path.resolve(__dirname, 'node_modules'),
         ],
         use: ['file-loader'],
@@ -40,21 +35,20 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // 'MiniCssExtractPlugin.loader',
-          { loader: 'style-loader', options: {sourceMap: true} },
-          { loader: 'css-loader', options: {sourceMap: true} },
-          { loader: 'sass-loader', options: {sourceMap: true} },
+          'style-loader',
+          'css-loader',
+          'sass-loader',
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/UI_kit/colors_and_type/colors_and_type.pug',
+      template: '/src/UI_kit/colors_and_type/colors_and_type.pug',
     }),
-    // new MiniCssExtractPlugin({
-    //   filename: '[name].css',
-    // }),
   ],
 };

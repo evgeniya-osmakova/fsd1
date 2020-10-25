@@ -1,36 +1,39 @@
 @font-face{
-  font-family: 'montserrat';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url('./montserrat/montserrat-Regular.svg') format('svg');
-  src: url('./montserrat/montserrat-Regular.woff') format('woff');
-  src: url('./montserrat/montserrat-Regular.ttf') format('truetype')
+  src: url('/src/fonts/montserrat/Montserrat-Regular.eot');
+  src: url('/src/fonts/montserrat/Montserrat-Regular.svg') format('svg');
+  src: url('/src/fonts/montserrat/Montserrat-Regular.woff') format('woff');
+  src: url('/src/fonts/montserrat/Montserrat-Regular.ttf') format('truetype')
 }
 
 @font-face {
-  font-family: 'montserrat';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url('./montserrat/montserrat-Bold.svg') format('svg');
-  src: url('./montserrat/montserrat-Bold.woff') format('woff');
-  src: url('./montserrat/montserrat-Bold.ttf') format('truetype')
+  src: url('/src/fonts/montserrat/Montserrat-Bold.eot');
+  src: url('/src/fonts/montserrat/Montserrat-Bold.svg') format('svg');
+  src: url('/src/fonts/montserrat/Montserrat-Bold.woff') format('woff');
+  src: url('/src/fonts/montserrat/Montserrat-Bold.ttf') format('truetype')
 }
 
 @font-face {
-  font-family: 'quicksand';
+  font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 400;
-  src: url('./quicksand/Quicksand-Regular.svg') format('svg');
-  src: url('./quicksand/Quicksand-Regular.woff') format('woff');
-  src: url('./quicksand/Quicksand-Regular.ttf') format('truetype')
+  font-weight: normal;
+  src: local(''), url('src/fonts/quicksand/Quicksand-Regular.eot');
+  src: local(''),url('src/fonts/quicksand/Quicksand-Regular.svg') format('svg');
+  src: local(''),url('src/fonts/quicksand/Quicksand-Regular.woff') format('woff');
+  src: local(''),url('src/fonts/quicksand/Quicksand-Regular.ttf') format('truetype')
 }
 
 @font-face {
-  font-family: 'quicksand';
+  font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 700;
-  src: url('./quicksand/Quicksand-Bold.svg') format('svg');
-  src: url('./quicksand/Quicksand-Bold.woff') format('woff');
-  src: url('./quicksand/Quicksand-Bold.ttf') format('truetype');
+  font-weight: bold;
+  src: url('src/fonts/quicksand/Quicksand-Bold.eot');
+  src: url('src/fonts/quicksand/Quicksand-Bold.svg') format('svg');
+  src: url('src/fonts/quicksand/Quicksand-Bold.woff') format('woff');
+  src: url('src/fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
 }
-
