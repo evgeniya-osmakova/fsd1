@@ -10,28 +10,30 @@
     row-gap: 4px;
     flex-direction: column;
   }
+
+  &__text_types {
+    display: flex;
+    row-gap: 4px;
+    flex-direction: column;
+  }
 }
 
-.container__text_types {
-  display: flex;
-  flex-direction: column;
-}
 
-.color_wrapper {
+.wrapper {
   display: flex;
   column-gap: 40px;
   align-items: flex-start;
-}
 
-.color_wrapper__demo {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-}
+  &__demo {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
 
-.color_wrapper__data {
-  font-family: 'Quicksand';
-  row-gap: 1px;
-  column-gap: 2px;
-  flex-direction: column;
+  &__data {
+    font-family: 'Quicksand';
+    row-gap: 1px;
+    column-gap: 2px;
+    flex-direction: column;
+  }
 }
