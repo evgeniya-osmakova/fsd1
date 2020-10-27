@@ -3,19 +3,19 @@ extends ../template/template.pug
 block variables
   mixin color(color, hex, opacity)
     - const color_opacity = opacity / 100 || 1
-    .wrapper
-      .wrapper__demo(style={ background: hex, opacity: color_opacity })
-      .wrapper__data
-        - const header = (opacity) ? color + ' ' + opacity + '%' : color
-          h2= header
-          .hex #{hex}
+      .color_wrapper
+        .color_wrapper__demo(style={ "background": hex, "opacity": color_opacity })
+        .color_wrapper__data
+          - const header = (opacity) ? color + ' ' + opacity + '%' : color
+          | #{header}
+          p.hex #{hex}
 
-  mixin text(name, text, font, size, weight)
-    .wrapper
-      .wrapper__demo
-        p #{name}
-      .wrapper__data
-        p #{text}
+  mixin text(name, text, font, size, weight, transform)
+    - const text_transform = transform || 'none'
+      .text_wrapper
+        .text_wrapper__demo(style={ "font-size": size }) #{name}
+        .text_wrapper__data(style={"font-size": size, "font-weight": weight,
+          "font-family": font, "text-transform": text_transform}) #{text}
 
 block append style
   link(rel="stylesheet", href="/src/UI_kit/colors_and_type/colors_and_type.scss" type="text/css")
@@ -23,11 +23,11 @@ block append style
 block content
   .container
     .container__colors
-      - const color_data = [{ name: 'Dark Shade', hex: '#1F2041', opacity: 100 },{ name: 'Dark Shade', hex: '#1F2041', opacity: 75 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 50 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 25 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 5 }, { name: 'Purple', hex: '#BC9CFF' }, { name: 'Green', hex: '#6FCF97' }]
-      each color in color_data
-        +color(color.name, color.hex, color.opacity)
+      - const color_data = [{ name: 'Dark Shade', hex: '#1F2041', opacity: 100 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 75 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 50 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 25 }, { name: 'Dark Shade', hex: '#1F2041', opacity: 5 }, { name: 'Purple', hex: '#BC9CFF' }, { name: 'Green', hex: '#6FCF97' }]
+        each color in color_data
+          +color(color.name, color.hex, color.opacity)
     .container__text_types
-      - const text_data = [{ name: 'H1', text: 'This one is the sub-section or widget title', font: 'Quicksand', size: '24px', weight: 700 }, { name: 'H2', text: 'Next one is the item title inside widgets', font: 'Quicksand', size: '19px', weight: 700 }, { name: 'H3', text: 'This is a label or CTA text', font: 'Montserrat', size: '12px', weight: 700 }, { name: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', font: 'Montserrat', size: '14px', weight: 400 }]
-      each text in text_data
-        +text(text.name, text.text, text.font, text.size, text.weight)
+      - const text_data = [{ name: 'H1', text: 'This one is the sub-section or widget title', font: 'Quicksand', size: '24px', weight: 700 }, { name: 'H2', text: 'Next one is the item title inside widgets', font: 'Quicksand', size: '19px', weight: 700 }, { name: 'H3', text: 'This is a label or CTA text', font: 'Montserrat', size: '12px', weight: 700, 'transform': 'uppercase' }, { name: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', font: 'Montserrat', size: '14px', weight: 400 }]
+        each text in text_data
+          +text(text.name, text.text, text.font, text.size, text.weight, text.transform)
 

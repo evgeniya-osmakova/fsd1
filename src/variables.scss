@@ -15,25 +15,35 @@ $lgg: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 
 @mixin h1Text {
-  font: 'Quicksand';
+  font-family: 'Quicksand';
   font-size: 24px;
   font-weight: 700;
+  line-height: 30px;
 }
 
 @mixin h2Text {
-  font: 'Quicksand';
+  font-family: 'Quicksand';
   font-size: 19px;
   font-weight: 700;
+  line-height: 24px;
 }
 
 @mixin h3Text {
-  font: 'Montserrat';
+  font-family: 'Montserrat';
   font-size: 12px;
   font-weight: 700;
+  line-height: 15px;
 }
 
 @mixin bodyText {
-  font: 'Montserrat';
+  font-family: 'Montserrat';
   font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin anotherText {
+  font-family: 'Quicksand';
+  font-size: 19px;
   font-weight: 400;
 }
