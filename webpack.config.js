@@ -55,7 +55,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: '/src/UI_kit/colors_and_type/colors_and_type.pug',
+      template: '/src/UI_kit/headers_and_footers/headers_and_footers.pug',
     }),
   ],
 };

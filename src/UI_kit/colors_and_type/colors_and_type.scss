@@ -1,6 +1,8 @@
 @import '/src/variables.scss';
 
 .container {
+  margin-top: 63px;
+  margin-left: 150px;
   display: grid;
   grid-template-areas: 'colors text';
   grid-template-columns: 40% 60%;

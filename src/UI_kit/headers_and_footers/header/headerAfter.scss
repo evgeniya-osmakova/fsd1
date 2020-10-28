@@ -1,0 +1,21 @@
+@import './header.scss';
+@import '/src/variables.scss';
+
+.signs {
+  @include bodyText;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+
+  &__line {
+    font-weight: 100;
+    opacity: 0.1;
+    font-size: 30px;
+    width: 1px;
+  }
+
+  &__name {
+    opacity: 0.5;
+  }
+}

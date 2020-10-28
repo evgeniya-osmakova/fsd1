@@ -1,0 +1,18 @@
+@import './footer.scss';
+@import './copyright.scss';
+@import './header/headerAfter.scss';
+@import './header/headerBefore.scss';
+
+html{
+  background: #E5E5E5;
+}
+
+.container {
+  padding-top: 62px;
+  padding-bottom: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}

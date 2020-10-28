@@ -1,0 +1,11 @@
+extends ../template/template.pug
+
+block append style
+  link(rel="stylesheet", href="/src/UI_kit/headers_and_footers/headers_and_footers.scss" type="text/css")
+
+block content
+  .container
+    include ./header/headerBefore.pug
+    include ./header/headerAfter.pug
+    include ./footer.pug
+    include ./copyright.pug

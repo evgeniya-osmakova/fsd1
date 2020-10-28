@@ -1,0 +1,47 @@
+@import '/src/variables.scss';
+@import './header.scss';
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+
+  &__gradientBack {
+    padding: 2px;
+    border-radius: 22px;
+    background: $lgp;
+    &__signIn {
+      @include h3Text;
+      text-transform: uppercase;
+      border-radius: 22px;
+      border: 0;
+      background: white;
+      color: $p;
+      cursor: pointer;
+      padding: {
+        top: 9px;
+        bottom: 10px;
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+
+  &__regisration {
+    cursor: pointer;
+    @include h3Text;
+    text-transform: uppercase;
+    padding: {
+      top: 9px;
+      bottom: 10px;
+      left: 19px;
+      right: 20px;
+    }
+    color: white;
+    border-radius: 22px;
+    background: $lgp;
+    border: 2px;
+    border-color: $lgp;
+  }
+}
+
