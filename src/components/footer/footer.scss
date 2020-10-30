@@ -1,4 +1,4 @@
-@import '/src/variables.scss';
+@import '/src/variables';
 
 .footer {
   background: white;
@@ -7,7 +7,6 @@
   display: flex;
   height: 442px;
   flex-direction: column;
-  //align-items: space-between;
   justify-content: space-between;
 
   &__text{
@@ -24,10 +23,8 @@
   height: 372px;
 
   &__section {
-    //opacity: 0.5;
     display: flex;
     flex-direction: column;
-    //gap: 18px;
     align-items: flex-start;
     justify-content: flex-start;
 
@@ -51,6 +48,33 @@
   }
 }
 
+.input_and_icon {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  width: 260px;
+  height: 45px;
+
+  &__input {
+    line-height: 124px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    @include bodyText;
+  }
+
+  &__icon{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    background: $lgp;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 .bottom {
   height: 70px;
   width: 100vw;
@@ -68,7 +92,6 @@
   &__icons {
     display: flex;
     gap: 20px;
-    justify-content: flex-end;
 
     &__item {
       cursor: pointer;

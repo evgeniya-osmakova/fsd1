@@ -1,7 +1,10 @@
-@import './footer.scss';
-@import './copyright.scss';
-@import './header/headerAfter.scss';
-@import './header/headerBefore.scss';
+@import '/src/variables.scss';
+@import '../../components/footer/footer';
+@import '../../components/copyright/copyright';
+@import '../../components/header/headerAfter.scss';
+@import '../../components/header/headerBefore.scss';
+@import '~material-design-icons/iconfont/material-icons.css';
+//@import '~font-awesome/css/font-awesome';
 
 html{
   background: #E5E5E5;

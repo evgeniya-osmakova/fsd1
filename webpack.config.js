@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-    entry: '/main.js',
+  entry: '/main.js',
   module: {
     rules: [
       {
@@ -21,11 +21,15 @@ module.exports = {
         },
       },
       {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader",
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: ['file-loader'],
       },
       {
-        test: /\.(woff|ttf|eot|svg)$/,
+        test: /\.(ttf|eot|svg|woff|woff2)$/,
         use: ['file-loader'],
       },
       {
@@ -53,7 +57,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: '/src/UI_kit/headers_and_footers/headers_and_footers.pug',
     }),

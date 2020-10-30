@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/evgeniya-osmakova/fsd1#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "font-awesome": "^4.7.0",
+    "material-design-icons": "^3.0.1",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "babel-loader": "^8.1.0",

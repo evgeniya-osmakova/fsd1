@@ -1,5 +1,4 @@
-@import '/src/variables.scss';
-
+@import '/src/variables';
 .header {
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   background: white;
@@ -15,7 +14,7 @@
     gap: 20px;
     @include bodyText;
     align-items: center;
-    &__bold {
+    &__chosen {
       cursor: pointer;
       @include h3Text;
       opacity: 0.75;
@@ -29,3 +28,9 @@
   }
 }
 
+.icon_down {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
