@@ -1,7 +1,12 @@
 extends header
 
+include ../button/button.pug
+
 block content
   .btns
-    .btns__gradientBack
-      button.btns__gradientBack__signIn(type="click") Войти
-    button.btns__regisration(type="click") Зарегистрироваться
+    +button({positionInPage: 'header_btn', isGradient: true})
+    +button({positionInPage: 'header_btn', isGradient: false})
+    //.btns__gradientBack
+    //  button.btns__gradientBack__signIn(type="click") Войти
+    //button.btns__regisration(type="click") Зарегистрироваться
+
