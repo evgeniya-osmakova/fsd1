@@ -1,47 +1,9 @@
 @import 'header';
 @import '/src/variables';
 
-//.btns {
-//  display: flex;
-//  justify-content: space-around;
-//  gap: 20px;
-//
-//  &__gradientBack {
-//    padding: 2px;
-//    border-radius: 22px;
-//    background: $lgp;
-//    &__signIn {
-//      @include h3Text;
-//      text-transform: uppercase;
-//      border-radius: 22px;
-//      border: 0;
-//      background: white;
-//      color: $p;
-//      cursor: pointer;
-//      padding: {
-//        top: 7px;
-//        bottom: 8px;
-//        left: 18px;
-//        right: 18px;
-//      }
-//    }
-//  }
-//
-//  &__regisration {
-//    cursor: pointer;
-//    @include h3Text;
-//    text-transform: uppercase;
-//    padding: {
-//      top: 9px;
-//      bottom: 10px;
-//      left: 19px;
-//      right: 20px;
-//    }
-//    color: white;
-//    border-radius: 22px;
-//    background: $lgp;
-//    border: 2px;
-//    border-color: $lgp;
-//  }
-//}
+.btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
 

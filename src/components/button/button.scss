@@ -2,20 +2,15 @@
 
 .btn {
   border-radius: 22px;
-  background: $lgp;
   cursor: pointer;
   @include h3Text;
   text-transform: uppercase;
-
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 .header_btn {
   &--white {
     @extend .white;
-    width: 87px;
+    width: 85px;
   }
 
   &--gradient {
@@ -46,7 +41,7 @@
   opacity: 0.5;
 }
 
-.white {
+.gradient {
   padding: {
     top: 9px;
     bottom: 10px;
@@ -54,14 +49,25 @@
     //right: 20px;
   }
   color: white;
-  border: 2px $lgp;
+  background: $lgp;
+  //border: 2px $lgp;
+  border: 0;
+  //background: white;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .gradientBack {
+  border-radius: 22px;
+  background: $lgp;
   padding: 2px;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
-.gradient {
+.white {
   padding: 2px;
   border: 0;
   background: white;
@@ -74,12 +80,15 @@
   }
 }
 
-.arrow {
-  position: relative;
-  left: 44px;
-  //display: inline;
-  color: #FFFFFF;
+.btn_and_arrow {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0;
+}
+
+.arrow {
+  position: relative;
+  right: 34px;
+  color: #FFFFFF;
 }
