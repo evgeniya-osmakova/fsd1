@@ -1,0 +1,27 @@
+mixin input(size, placeholder, arrow, dropdown, title, hover, clarification)
+  -const inputSize = `input-area--${size}`
+  -const inputHover = `input--${hover}`
+  -const inputBorderType = (dropdown.open) ? `input--half-border-radius` : `input--full-border-radius`
+
+    if title
+      .input-area(class = inputSize)
+        .input-area__top.input-top
+          .input-top__header #{title}
+          .input-top__clarification #{clarification}
+        if arrow
+          .input-area__bottom
+            input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+            i.material-icons.input-arrow arrow_forward
+        else if dropdown.existence
+          .input-area__bottom
+            input.input.input--dropdown(type = "text", disabled, class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+            i.material-icons.input-expansion(id="dropdown") expand_more
+        else
+          input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+    else
+      if arrow
+        .input-area__bottom
+          input.input.input--absolute(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+          i.material-icons.input-arrow arrow_forward
+      else
+        input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)

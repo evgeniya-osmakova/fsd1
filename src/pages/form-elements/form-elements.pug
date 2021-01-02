@@ -1,0 +1,79 @@
+extends ../templates/ui-kit-template
+include ../../components/components
+
+block content
+  .form-elements
+    .top-row
+      .left-column
+        .left-column__item-1
+          +input('big', 'Email', false, { existence: false }, 'Text Field', 'regular', 'Default')
+        .left-column__item-2
+          +input('big', 'This is pretty awesome', false, { existence: false }, 'Text Field', 'hovered', 'Hover / Focus')
+        .left-column__item-3
+          +input('big', 'Сколько гостей', false, { existence: true, open: false }, 'Dropdown', 'regular')
+        .left-column__item-4
+          +input('big', 'ДД.ММ.ГГГГ', false, { existence: false }, 'masked text field', 'regular')
+        .left-column__item-5
+          .left-column__item-5--fitst-elem
+            +input('xsmall', 'ДД.ММ.ГГГГ', false, { existence: true, open: false }, 'date dropdown', 'regular')
+          +input('xsmall', '19.08.2019', false, { existence: true, open: false }, 'date dropdown', 'regular')
+        .left-column__item-6
+          +input('medium', '19 авг - 23 авг', false, { existence: true, open: false }, 'filter date dropdown', 'regular')
+        .left-column__item-7
+          +input('medium', 'Email', true, { existence: false }, 'subscription text field', 'regular')
+        .left-column__item-8
+          +input('medium', '2 спальни, 2 кровати...', false, { existence: true, open: true }, 'dropdown', 'regular', 'default')
+        .left-column__item-9
+          +input('medium', '2 спальни, 2 кровати...', false, {
+            existence: true,
+            open: true
+          }, 'dropdown', 'hovered', 'expanded')
+          +dropdown([{name: 'спальни', count: 2}, {name: 'кровати', count: 2}, {
+            name: 'ванные комнаты',
+            count: 0
+          }], 'small', false, false)
+        .left-column__item-10
+          +checkbox({ existence: true, closed: true, data: [] }, 'expandable checkbox list')
+        .left-column__item-11
+          +checkbox({ buttons: false, closed: false, data: [
+              { rich: false, header: '', text: 'Завтрак' },
+              { rich: false, header: '', text: 'Письменный стол' },
+              { rich: false, header: '', text: 'Стул для кормления' },
+              { rich: false, header: '', text: 'Кроватка' },
+              { rich: false, header: '', text: 'Телевизор' },
+              { rich: false, header: '', text: 'Шампунь' },
+            ] }, 'expandable checkbox list')
+      .middle-column
+        .middle-column__item-1
+          +checkbox({
+            buttons: true, closed: false, data: [
+              {rich: false, header: '', text: 'Можно курить'},
+              {rich: false, header: '', text: 'Можно с питомцами'},
+              {rich: false, header: '', text: 'Можно пригласить гостей (до 10 человек)'},
+            ]
+          }, 'Checkbox Buttons')
+        .middle-column__item-6
+          +input('big', 'Сколько гостей', false, {
+            existence: true,
+            open: true
+          }, 'dropdown', 'hovered')
+          +dropdown([{name: 'взрослые', count: 0}, {name: 'дети', count: 0}, { name: 'младенцы', count: 0}],
+            'big', false, true)
+        .middle-column__item-7
+          +checkbox({
+            buttons: true, closed: false, data: [
+              {rich: true, header: 'Широкий коридор', text: 'Ширина коридоров в номере не\u00A0менее 91 см.'},
+              {rich: true, header: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'},
+            ]
+          }, 'rich Checkbox Buttons')
+      .right-column
+        .right-column__item
+          +input('big', '3 гостя', false, {
+            existence: true,
+            open: true
+          }, 'dropdown', 'hovered')
+          +dropdown([{name: 'взрослые', count: 2}, {name: 'дети', count: 1}, {name: 'младенцы', count: 0}],
+            'big', true, true)
+    .bottom-row
+      .bottom-left
+      .bottom-right

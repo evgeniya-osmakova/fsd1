@@ -1,0 +1,17 @@
+mixin button(positionInPage, isGradient, text, dim, size)
+  - const gradient = `${positionInPage}--gradient`
+  - const white = `${positionInPage}--white`
+  - const sizePosition = `${positionInPage}--${size}`
+
+
+    if isGradient
+      if positionInPage === 'header-btn' || size === 'small'
+        button.btn(class = gradient, class = sizePosition, class = dim, type="click") #{text}
+      else
+        .btn-and-arrow
+          button.btn(class = gradient, class = sizePosition, type="click") #{text}
+          i.material-icons.arrow arrow_forward
+    else
+      .gradientBack
+        button.btn(class = white, class = sizePosition, class = dim, type="click") #{text}
+

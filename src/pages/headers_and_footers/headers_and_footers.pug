@@ -1,0 +1,11 @@
+extends ../templates/ui-kit-template
+include ../../components/components
+
+block content
+  .header-footer
+    .header-before
+      +headerBefore()
+    .header-after
+      +headerAfter()
+    +footer()
+    +copyright()

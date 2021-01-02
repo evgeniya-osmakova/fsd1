@@ -1,0 +1,24 @@
+@import '../public/styles/variables.scss';
+//$fa-font-path: "~font-awesome/fonts/";
+//@import "~font-awesome/scss/font-awesome";
+@import './components/cards/search/search.scss';
+
+@import './components/form_elements/button/button.scss';
+@import './components/form_elements/input/input.scss';
+@import './components/form_elements/dropdown/dropdown.scss';
+@import './components/form_elements/checkbox/checkbox.scss';
+
+@import 'components/headers_footers/footer/copyright';
+@import './components/headers_footers/footer/footer.scss';
+@import './components/headers_footers/footer/social.scss';
+@import './components/headers_footers/header/header.scss';
+@import './components/headers_footers/header/headerBefore.scss';
+@import './components/headers_footers/header/headerAfter.scss';
+
+@import './pages/cards/cards.scss';
+@import './pages/colors_and_type/colors_and_type.scss';
+@import './pages/headers_and_footers/headers_and_footers.scss';
+@import './pages/form-elements/form-elements.scss';
+@import './pages/templates/ui-kit-template.scss';
+
+//@import '../public/fonts/fonts';

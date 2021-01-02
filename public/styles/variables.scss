@@ -1,0 +1,49 @@
+@import '../fonts/fonts';
+
+$dark100: rgba(31, 32, 65, 1);
+$dark75: rgba(31, 32, 65, 0.75);
+$dark50: rgba(31, 32, 65, 0.5);
+$dark25: rgba(31, 32, 65, 0.25);
+$dark5: rgba(31, 32, 65, 0.05);
+$dark1: rgba(31, 32, 65, 0.1);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
+$lg-purple: linear-gradient(180deg, #BC9CFF 0%, #8BA4F7 100%);
+$lg-purple25: linear-gradient(180deg, rgba(188, 156, 255, .25) 0%, rgba(139, 164, 247, .25) 100%);
+$lg-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+
+@mixin h1Text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+@mixin h2Text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@mixin h3Text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+@mixin bodyText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin anotherText {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+}

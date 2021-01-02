@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 20px $dark50;
+  background: white;
+  width: 100vw;
+  height: 70px;
+}
+
+.header-logo {
+  margin-left: 140px;
+}
+
+.header-links {
+  display: flex;
+  @include bodyText;
+  align-items: center;
+}
+
+.header-link{
+  margin-right: 20px;
+  cursor: pointer;
+
+  &--chosen {
+    @include h3Text;
+    opacity: 0.75;
+    font-size: 14px;
+  }
+
+  &--regular {
+    opacity: 0.5;
+  }
+}
+
+.icon_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  margin-right: 140px;
+}
+
+.signs {
+  @include bodyText;
+  display: flex;
+  align-items: center;
+  margin-right: 140px;
+
+  &__line {
+    font-weight: 100;
+    opacity: 0.1;
+    font-size: 30px;
+    width: 1px;
+  }
+
+  &__name {
+    opacity: 0.5;
+  }
+}
