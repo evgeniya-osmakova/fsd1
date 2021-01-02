@@ -1,0 +1,122 @@
+.checkbox-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 13px;
+
+  &__title {
+    @include h3Text;
+    text-transform: uppercase;
+    margin-right: 30px;
+    color: #1F2041;
+  }
+
+  &__icon {
+    color: $dark50;
+    cursor: pointer;
+  }
+}
+
+.checkbox-label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+  //max-width: 245px;
+  padding-bottom: 13px;
+
+  &__header {
+    @include h3Text;
+    font-size: 14px;
+    color: $dark75;
+    padding-top: 4px;
+    //margin-top: 155px;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+
+    &--rich {
+      @include bodyText;
+      font-size: 12px;
+      color: $dark50;
+      max-width: 225px;
+      line-height: 14px;
+    }
+
+    &--regular {
+      //padding-top: 4px;
+      @include bodyText;
+      color: $dark50;
+      max-width: 200px;
+      line-height: 18px;
+    }
+  }
+
+  &__old {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__new {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 2px;
+    display: flex;
+    //margin-top: 2px;
+    //margin-bottom: 100px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  //&:hover {
+  //  border: 1px solid #BC9CFF;
+  //  //color: $color-light-red;
+  //}
+  &:hover .checkbox-label__new {
+    border: 1px solid #BC9CFF;
+  }
+}
+
+.checkbox-label input:checked ~ .checkbox-label__new {
+  border: 1px solid #BC9CFF;
+}
+
+.checkbox-label input:checked ~ .checkbox-label__new::after {
+  //z-index: 1;
+  display: block;
+  background-image: url(../public/images/check.svg);
+  background-size: cover;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+.checkbox-label .checkbox-label__new::after {
+  //left: 7px;
+  //top: 3px;
+  //background-image: url(../public/images/check.svg);
+  //background-size: cover;
+  //position: absolute;
+  //background-position: 0 0;
+  //z-index: 2;
+
+  //border-width: 0 2px 2px 0;
+  //width: 4px;
+  //height: 8px;
+  //transform: rotate(45deg);
+}

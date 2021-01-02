@@ -1,0 +1,30 @@
+mixin checkbox(list, title)
+  if list.closed
+    .checkbox-list-header
+      .checkbox-list-header__title
+        | #{title}
+      i.material-icons.checkbox-list-header__icon keyboard_arrow_down
+
+  if !list.buttons && !list.closed
+      .checkbox-list-header
+        .checkbox-list-header__title
+          | #{title}
+        i.material-icons.checkbox-list-header__icon keyboard_arrow_up
+  if list.buttons
+    .checkbox-list-header
+      .checkbox-list-header__title
+        | #{title}
+
+  if !list.closed
+    each item in list.data
+      label.checkbox-label
+        if item.rich
+          .checkbox-label__header
+            | #{item.header}
+          .checkbox-label__text--rich
+            | #{item.text}
+        else
+          .checkbox-label__text--regular
+            | #{item.text}
+        input.checkbox-label__old(type="checkbox")
+        span.checkbox-label__new

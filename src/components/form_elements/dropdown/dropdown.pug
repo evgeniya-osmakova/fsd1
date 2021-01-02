@@ -1,0 +1,31 @@
+mixin dropdown(data, size, clear, apply)
+  -const dropdownWhite = `dropdown-menu--${size}`
+  -const dropdownHeight = (clear || apply) ? `dropdown-menu--long` : `dropdown-menu--short`
+
+    .dropdown-menu(class = `${dropdownWhite} ${dropdownHeight}`)
+      each item in data
+        .dropdown-menu__item.dropdown-item
+          .dropdown-item__name.dropdown-item__text
+            |#{item.name}
+          .dropdown-item__counter
+            .dropdown-item__simbol
+              .dropdown-item__modifier
+              .dropdown-item__simbol--minus
+                |-
+            .dropdown-item__count.dropdown-item__text
+              |#{item.count}
+            .dropdown-item__simbol
+              .dropdown-item__modifier
+              .dropdown-item__simbol--plus
+                |+
+      if apply && clear
+        .dropdown-menu__btns
+          .dropdown-btn
+            |Очистить
+          .dropdown-btn
+            |Применить
+      else if apply
+        .dropdown-menu__btn
+          .dropdown-btn
+            |Применить
+
