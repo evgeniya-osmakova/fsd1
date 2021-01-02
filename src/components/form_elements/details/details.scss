@@ -1,0 +1,36 @@
+.details {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid $dark1;
+  padding-bottom: 17px;
+
+  &__img {
+    background: $lg-purple;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+  }
+
+  &__body {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.details-body {
+
+  &__title {
+    @include h3Text;
+    font-size: 14px;
+    color: $dark75;
+  }
+
+  &__text {
+    margin-top: 5px;
+    @include bodyText;
+    color: $dark75;
+  }
+}

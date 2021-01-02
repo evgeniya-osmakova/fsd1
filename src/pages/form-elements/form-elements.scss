@@ -65,7 +65,7 @@
   }
 
   &__item-11 {
-    margin-bottom: 105px;
+    margin-bottom: 88px;
   }
 }
 
@@ -101,6 +101,15 @@
 
 .bottom-left {
   grid-area: bottom-left;
+  margin-left: 141px;
+
+  &__item-1 {
+    margin-bottom: 23px;
+  }
+
+  &__item-2 {
+    margin-bottom: 131px;
+  }
 }
 
 .bottom-right {
