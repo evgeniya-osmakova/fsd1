@@ -1,0 +1,10 @@
+mixin bulletList(header, data)
+  .bulletList
+    .bulletList__header
+      |#{header}
+    ul.bulletList__list.bullet-list
+      each item in data
+        li.bullet-item
+          .bullet-item__img
+          .bullet-item__text
+            |#{item}

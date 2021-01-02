@@ -67,13 +67,16 @@ block content
             ]
           }, 'rich Checkbox Buttons')
       .right-column
-        .right-column__item
+        .right-column__item-6
           +input('big', '3 гостя', false, {
             existence: true,
             open: true
           }, 'dropdown', 'hovered')
           +dropdown([{name: 'взрослые', count: 2}, {name: 'дети', count: 1}, {name: 'младенцы', count: 0}],
             'big', true, true)
+        .right-column__item-7
+          +bulletList('bullet list', ['Нельзя с питомцами',
+            'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
     .bottom-row
       .bottom-left
       .bottom-right

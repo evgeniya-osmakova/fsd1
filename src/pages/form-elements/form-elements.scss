@@ -93,6 +93,10 @@
 
 .right-column {
   grid-area: right-column;
+
+  &__item-6 {
+    margin-bottom: 99px;
+  }
 }
 
 .bottom-left {
