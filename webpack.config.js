@@ -151,7 +151,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     // ...htmlPlugins,
     new HtmlWebpackPlugin({
-      template: './src/pages/form-elements/form-elements.pug',
+      template: './src/pages/cards/cards.pug',
       minify: false,
     }),
     new webpack.ProvidePlugin({

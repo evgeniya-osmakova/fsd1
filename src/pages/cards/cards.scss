@@ -1,0 +1,14 @@
+.cards {
+  //margin-left: 140px;
+  margin-top: 68px;
+  display: grid;
+  grid-template-columns: 530px 400px auto;
+}
+
+.cards-left {
+  margin-left: 140px;
+
+  &__item-1 {
+    margin-bottom: 40px;
+  }
+}
