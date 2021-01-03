@@ -1,0 +1,7 @@
+mixin linkBtn (hovered, text)
+  if hovered
+    .link-btn.link-btn--hovered
+      | #{text}
+  else
+    .link-btn.link-btn--regular
+      | #{text}

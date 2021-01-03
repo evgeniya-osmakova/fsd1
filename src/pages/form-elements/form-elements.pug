@@ -109,8 +109,9 @@ block content
             .right-item-2__btns--last
               +button('body-btn', false, 'CLICK ME', 'dim', 'small')
           .right-item-2__btns
-
+            +linkBtn(false, 'CLICK ME')
             .right-item-2__btns--last
+              +linkBtn(true, 'CLICK ME')
           +button('body-btn', true, 'перейти к оплате', '', 'big')
         .right-column__item-6
           +input('big', '3 гостя', false, {
