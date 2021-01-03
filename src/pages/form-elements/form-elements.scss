@@ -132,6 +132,11 @@
   }
 }
 
+.bottom-row {
+  display: grid;
+  grid-template-areas: 'bottom-left bottom-right';
+  grid-template-columns: 580px auto;
+}
 .bottom-left {
   grid-area: bottom-left;
   margin-left: 141px;
@@ -147,6 +152,7 @@
 
 .bottom-right {
   grid-area: bottom-right;
+  margin-top: 8px;
 }
 
 .middle-item-3 {

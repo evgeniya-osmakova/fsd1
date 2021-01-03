@@ -1,0 +1,8 @@
+mixin people(img, title, text)
+  .people
+    img.people__img(src=`img/${img}`)
+    .people__body.peoples-body
+      .people-body__title
+        | #{title}
+      .people-body__text
+        | #{text}

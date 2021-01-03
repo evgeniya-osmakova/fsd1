@@ -1,0 +1,37 @@
+.people {
+  //width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__img {
+    //height: 147px;
+    //width: 47px;
+    //  border: 2px solid #FFFFFF;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    border-radius: 60%;
+  }
+
+  &__body {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.people-body {
+
+  &__title {
+    @include h3Text;
+    font-size: 14px;
+    color: $dark75;
+  }
+
+  &__text {
+    margin-top: 5px;
+    @include bodyText;
+    color: $dark75;
+  }
+}
