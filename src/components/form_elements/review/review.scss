@@ -1,0 +1,16 @@
+.review {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &__liks {
+
+  }
+
+  &__text {
+    max-width: 655px;
+    margin-left: 15px;
+    @include bodyText;
+    color: $dark75;
+  }
+}

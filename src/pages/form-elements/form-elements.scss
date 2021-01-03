@@ -153,6 +153,11 @@
 .bottom-right {
   grid-area: bottom-right;
   margin-top: 8px;
+  margin-left: 10px;
+
+  &__item-1 {
+    margin-bottom: 5px;
+  }
 }
 
 .middle-item-3 {
