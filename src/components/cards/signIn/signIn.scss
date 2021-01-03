@@ -1,0 +1,51 @@
+.signIn {
+  width: 380px;
+  height: 358px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 30px;
+
+  &__title {
+    @include h1Text;
+    color: $dark100;
+    padding-bottom: 21px;
+    padding-top: 7px;
+    letter-spacing: 1.5px;
+    width: 300px;
+    //margin-left: 20px;
+  }
+
+  &__email {
+    padding-bottom: 10px;
+  }
+
+  &__password {
+    padding-bottom: 20px;
+  }
+
+  &__btn {
+    padding-bottom: 30px;
+  }
+
+  &__creating-acc {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.creating-acc {
+
+  &__text {
+    @include bodyText;
+    color: #000000;
+  }
+
+  &__btn {
+    margin-left: 57px;
+  }
+}

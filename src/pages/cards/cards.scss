@@ -16,3 +16,19 @@
     margin-bottom: 140px;
   }
 }
+
+.cards-middle {
+  margin-left: 32px;
+}
+
+.cards-right {
+  margin-left: 40px;
+
+  &__item-1 {
+    margin-bottom: 39px;
+  }
+
+  //&__item-2 {
+  //  margin-bottom: 140px;
+  //}
+}
