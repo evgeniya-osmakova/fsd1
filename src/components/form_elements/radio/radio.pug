@@ -1,0 +1,9 @@
+mixin radio(text, active)
+  .radio
+    if active
+      .radio-indicator.radio-indicator--active
+        .radio-indicator__circle
+    else
+      .radio-indicator
+    .radio-text
+      | #{text}

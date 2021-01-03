@@ -52,6 +52,13 @@ block content
               {rich: false, header: '', text: 'Можно пригласить гостей (до 10 человек)'},
             ]
           }, 'Checkbox Buttons')
+        .middle-column__item-2
+          .form-elements__header
+            | Radio Buttons
+          .middle-item-2__btns
+            +radio('Мужчина', true)
+            .middle-column__item-2--last
+              +radio('Женщина', false)
         .middle-column__item-3
           .form-elements__header
             |Toggle

@@ -1,0 +1,31 @@
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.radio-indicator {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark25;
+  border-radius: 50%;
+
+  &--active {
+    border-color: $purple;
+  }
+
+  &__circle {
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 12px;
+    height: 12px;
+    background: $lg-purple;
+    border-radius: 50%;
+  }
+}
+
+.radio-text {
+  @include bodyText;
+  color: $dark50;
+  margin-left: 10px;
+}
