@@ -1,0 +1,18 @@
+mixin pagination()
+  .pagination
+    .pagination__pages.pages
+      .pages__first
+        .pages__first-text
+          | 1
+      .pages__number.page
+        | 2
+      .pages__number.page
+        | 3
+      .pages__number.page
+        | ...
+      .pages__number.page--last
+        | 15
+      .pages__last.page
+        .i.material-icons.pages__last-icon arrow_forward
+    .pagination__text
+      | 1 – 12 из 100+ вариантов аренды

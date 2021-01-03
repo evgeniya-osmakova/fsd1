@@ -113,14 +113,18 @@ block content
             .right-item-2__btns--last
               +linkBtn(true, 'CLICK ME')
           +button('body-btn', true, 'перейти к оплате', '', 'big')
-        .right-column__item-6
+        .right-column__item-3
+          .form-elements__header
+            | pagination
+          +pagination()
+        .right-column__item-4
           +input('big', '3 гостя', false, {
             existence: true,
             open: true
           }, 'dropdown', 'hovered')
           +dropdown([{name: 'взрослые', count: 2}, {name: 'дети', count: 1}, {name: 'младенцы', count: 0}],
             'big', true, true)
-        .right-column__item-7
+        .right-column__item-5
           +bulletList('bullet list', ['Нельзя с питомцами',
             'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
     .bottom-row
