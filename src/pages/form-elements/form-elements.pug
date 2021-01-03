@@ -73,7 +73,12 @@ block content
             .middle-column__item-4--last
               +like(12, true)
         .middle-column__item-5
-
+          .form-elements__header
+            | rate button
+          .middle-item-5__btns
+            +rate(4)
+            .middle-column__item-5--last
+              +rate(5)
         .middle-column__item-6
           +input('big', 'Сколько гостей', false, {
             existence: true,

@@ -108,6 +108,14 @@
     }
   }
 
+  &__item-5 {
+    margin-bottom: 196px;
+
+    &--last {
+      margin-left: 20px;
+    }
+  }
+
   &__item-6 {
     margin-bottom: 98.5px;
   }
@@ -161,5 +169,13 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 40px;
+  }
+}
+
+.middle-item-5 {
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 }

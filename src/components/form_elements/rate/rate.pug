@@ -1,0 +1,7 @@
+mixin rate(count)
+  .rate
+    each val in [1, 2, 3, 4, 5]
+      if (val <= count)
+        i.material-icons.rate__star.rate__star--active star
+      else
+        i.material-icons.rate__star.rate__star--regular star_border
