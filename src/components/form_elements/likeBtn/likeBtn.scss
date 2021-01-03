@@ -1,0 +1,48 @@
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid $dark25;
+  border-radius: 10px;
+  min-width: 40px;
+  height: 20px;
+  box-sizing: border-box;
+  position: relative;
+  background: #FFFFFF;
+  background-clip: padding-box;
+
+  &--hovered {
+    border: 1px solid transparent;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: $lg-purple;
+    }
+  }
+
+  &__img {
+    margin-left: 5px;
+    font-size: 10px;
+    color: $dark25;
+
+    &--hovered {
+      color: $purple;
+    }
+  }
+
+  &__count {
+    margin-left: 5px;
+    color: $dark25;
+    @include bodyText;
+    font-size: 10px;
+
+    &--hovered {
+      color: $purple;
+    }
+  }
+}

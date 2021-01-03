@@ -1,5 +1,11 @@
 .form-elements {
   margin-top: 58px;
+
+  &__header {
+    @include h3Text;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
 }
 
 .top-row {
@@ -83,6 +89,13 @@
     margin-bottom: 41px;
   }
 
+  &__item-4 {
+
+    &--last {
+      margin-left: 10px;
+    }
+  }
+
   &__item-6 {
     margin-bottom: 98.5px;
   }
@@ -114,4 +127,13 @@
 
 .bottom-right {
   grid-area: bottom-right;
+}
+
+.middle-item-4 {
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
 }

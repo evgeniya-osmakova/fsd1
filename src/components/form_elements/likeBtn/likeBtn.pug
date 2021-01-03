@@ -1,0 +1,11 @@
+mixin like(count, hover)
+  if (hover)
+    .like.like--hovered
+      i.material-icons.like__img.like__img--hovered favorite
+      .like__count.like__count--hovered
+        | #{count}
+  else
+    .like
+      i.material-icons.like__img favorite_border
+      .like__count
+        | #{count}
