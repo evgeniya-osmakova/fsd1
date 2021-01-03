@@ -2,36 +2,46 @@
   border-radius: 22px;
   cursor: pointer;
   @include h3Text;
+  line-height: 15px;
   text-transform: uppercase;
 }
 
 .header-btn {
   &--white {
     @extend .white;
-    width: 85px;
+    width: 192px;
+    height: 30px;
   }
 
   &--gradient {
     @extend .gradient;
-    width: 196px;
+    width: 85px;
+    height: 34px;
   }
 }
 
 .body-btn {
-  &--white {
+  &--white-big {
     @extend .white;
+    width: 316px;
+    height: 40px;
   }
 
-  &--gradient {
+  &--white-small {
+    @extend .white;
+    width: 95px;
+    height: 40px;
+  }
+
+  &--gradient-big {
     @extend .gradient;
-  }
-
-  &--big {
     width: 320px;
+    height: 44px;
   }
-
-  &--small {
+  &--gradient-small {
+    @extend .gradient;
     width: 99px;
+    height: 44px;
   }
 }
 
@@ -40,12 +50,6 @@
 }
 
 .gradient {
-  padding: {
-    top: 9px;
-    bottom: 10px;
-    //left: 19px;
-    //right: 20px;
-  }
   color: white;
   background: $lg-purple;
   //border: 2px $lgp;
@@ -56,26 +60,24 @@
   }
 }
 
-.gradientBack {
+.gradient-back {
   border-radius: 22px;
-  background: $lg-purple;
   padding: 2px;
+  background: $lg-purple;
+
+  &--dim {
+    background: $lg-purple50;
+  }
+
   &:hover {
-    opacity: 0.5;
+    background: $lg-purple50;
   }
 }
 
 .white {
-  padding: 2px;
   border: 0;
   background: white;
   color: $purple;
-  padding: {
-    top: 7px;
-    bottom: 8px;
-    //left: 18px;
-    //right: 18px;
-  }
 }
 
 .btn-and-arrow {

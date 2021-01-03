@@ -94,6 +94,24 @@ block content
             ]
           }, 'rich Checkbox Buttons')
       .right-column
+        .right-column__item-1
+          .form-elements__header
+            | Range Slider
+        .right-column__item-2
+          .form-elements__header
+            | buttons
+          .right-item-2__btns
+            +button('body-btn', true, 'CLICK ME', '', 'small')
+            .right-item-2__btns--last
+              +button('body-btn', true, 'CLICK ME', 'dim', 'small')
+          .right-item-2__btns
+            +button('body-btn', false, 'CLICK ME', '', 'small')
+            .right-item-2__btns--last
+              +button('body-btn', false, 'CLICK ME', 'dim', 'small')
+          .right-item-2__btns
+
+            .right-item-2__btns--last
+          +button('body-btn', true, 'перейти к оплате', '', 'big')
         .right-column__item-6
           +input('big', '3 гостя', false, {
             existence: true,
