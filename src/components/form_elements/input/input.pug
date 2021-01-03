@@ -19,9 +19,10 @@ mixin input(size, placeholder, arrow, dropdown, title, hover, clarification)
         else
           input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
     else
-      if arrow
-        .input-area__bottom
-          input.input.input--absolute(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
-          i.material-icons.input-arrow arrow_forward
-      else
-        input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+      .input-area(class = inputSize)
+        if arrow
+          .input-area__bottom
+            input.input.input--absolute(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+            i.material-icons.input-arrow arrow_forward
+        else
+          input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)

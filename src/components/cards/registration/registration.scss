@@ -1,0 +1,76 @@
+.registration {
+  width: 380px;
+  height: 646px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 30px;
+
+  &__title {
+    @include h1Text;
+    color: $dark100;
+    padding-bottom: 20px;
+    padding-top: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  &__name {
+    padding-bottom: 10px;
+  }
+
+  &__surname {
+    padding-bottom: 10px;
+  }
+
+  &__sex {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &--last {
+      margin-left: 20px;
+    }
+  }
+
+  &__birthday {
+    padding-bottom: 20px;
+  }
+
+  &__login {
+    padding-bottom: 10px;
+  }
+
+  &__password {
+    padding-bottom: 10px;
+  }
+
+  &__promo {
+    padding-bottom: 20px;
+  }
+
+  &__btn {
+    padding-bottom: 30px;
+  }
+
+  &__sign-in {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sign-in {
+
+  &__text {
+    @include bodyText;
+    color: #000000;
+  }
+
+  &__btn {
+    margin-left: 35px;
+  }
+}
