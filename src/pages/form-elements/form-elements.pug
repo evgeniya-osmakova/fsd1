@@ -52,6 +52,12 @@ block content
               {rich: false, header: '', text: 'Можно пригласить гостей (до 10 человек)'},
             ]
           }, 'Checkbox Buttons')
+        .middle-column__item-3
+          .form-elements__header
+            |Toggle
+          .middle-item-3__first-toggle
+            +toggle('Получать спецпредложения', true)
+          +toggle('Получать спецпредложения', false)
         .middle-column__item-4
           .form-elements__header
             | like button

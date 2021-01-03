@@ -89,6 +89,10 @@
     margin-bottom: 41px;
   }
 
+  &__item-3 {
+    margin-bottom: 43px;
+  }
+
   &__item-4 {
 
     &--last {
@@ -129,6 +133,11 @@
   grid-area: bottom-right;
 }
 
+.middle-item-3 {
+  &__first-toggle {
+    margin-bottom: 11px;
+  }
+}
 .middle-item-4 {
   &__btns {
     display: flex;

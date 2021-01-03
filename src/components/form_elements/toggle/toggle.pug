@@ -1,0 +1,10 @@
+mixin toggle(text, active)
+  .toggle
+    if active
+      .toggle-indicator.toggle-indicator--active
+        .toggle-indicator__circle.toggle-indicator__circle--active
+    else
+      .toggle-indicator
+        .toggle-indicator__circle
+    .toggle-text
+      | #{text}
