@@ -1,0 +1,152 @@
+.booking {
+  width: 380px;
+  height: 511px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 18px;
+  }
+
+  &__guests {
+    margin-bottom: 19px;
+  }
+
+  &__btn {
+    padding-left: 28px;
+  }
+
+  &__total {
+    padding-left: 30px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.booking-header {
+
+  &__room {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+}
+
+.booking-room {
+  &__number {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+
+  &__type {
+    @include h3Text;
+    color: $purple;
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+
+.room-number {
+  &__symbol {
+    @include h3Text;
+    color: $dark100;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__number {
+    @include h3Text;
+    color: $dark100;
+    font-size: 24px;
+    line-height: 17px;
+    margin-left: 4px;
+  }
+}
+
+.booking-price {
+  color: $dark50;
+
+  &__number {
+    @include h3Text;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__clarification {
+    @include bodyText;
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.search-text {
+  color: $dark75;
+  @include bodyText;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 11px;
+
+  &--last {
+    padding-bottom: 33px;
+  }
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark25;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &__text {
+    color: $dark25;
+    @include h3Text;
+    padding-top: 1px;
+    padding-left: 7px;
+  }
+}
+
+.search-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 240px;
+  line-height: 18px;
+}
+
+.booking-total {
+  &__text {
+    @include h3Text;
+    font-size: 19px;
+    color: $dark100;
+  }
+
+  &__dots {
+    width: 182px;
+    height: 18px;
+    border-bottom: 1px dashed $dark25;
+    margin: 0 5px;
+  }
+}
