@@ -2,20 +2,6 @@ mixin search()
   .search
     .search__title
       | Найдём номера под ваши пожелания
-    .search__date-inputs
-      .date-input
-        +input('xsmall', 'ДД.ММ.ГГГГ', false, {
-            existence: true,
-            open: false
-          }, 'прибытие', 'regular')
-      +input('xsmall', 'ДД.ММ.ГГГГ', false, {
-        existence: true,
-        open: false
-      }, 'выезд', 'regular')
-    .search__guests
-      +input('big', 'Сколько гостей', false, {
-        existence: true,
-        open: false
-      }, 'гости', 'regular')
+    +bookingData('ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ', 'Сколько гостей')
     .search__btn
       +button('body-btn', true, 'подобрать номер', '', 'big')

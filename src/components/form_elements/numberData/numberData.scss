@@ -1,0 +1,61 @@
+.number-data {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
+.room-number {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+
+  &__symbol {
+    @include h3Text;
+    color: $dark100;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__number {
+    @include h3Text;
+    color: $dark100;
+    line-height: 17px;
+    margin-left: 4px;
+
+    &--big {
+      font-size: 24px;
+    }
+
+    &--regular {
+      font-size: 19px;
+    }
+  }
+}
+
+.room-type {
+  @include h3Text;
+  color: $purple;
+  text-transform: uppercase;
+  line-height: 15px;
+}
+
+.room-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  color: $dark50;
+
+  &__number {
+    @include h3Text;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__clarification {
+    @include bodyText;
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

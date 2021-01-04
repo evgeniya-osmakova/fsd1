@@ -1,0 +1,18 @@
+mixin bookingData(arrivalDate, departureDate, guests)
+  .bookingData
+    .bookingData__dates
+      .arrival
+        +input('xsmall', arrivalDate, false, {
+          existence: true,
+          open: false
+        }, 'прибытие', 'regular')
+      .departure
+        +input('xsmall', departureDate, false, {
+          existence: true,
+          open: false
+        }, 'выезд', 'regular')
+    .bookingData__guests
+      +input('big', guests, false, {
+        existence: true,
+        open: false
+      }, 'гости', 'regular')

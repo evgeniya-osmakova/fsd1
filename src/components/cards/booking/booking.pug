@@ -5,53 +5,28 @@ mixin booking()
         | i
 
   .booking
-    .booking__header.booking-header
-      .booking-header__room.booking-room
-        .booking-room__number.room-number
-          .room-number__symbol
-            | №
-          .room-number__number
-            | 888
-        .booking-room__type
-          | люкс
-      .booking-header__price.booking-price
-        .booking-price__number
-          |9 990₽
-        .booking-price__clarification
-          |в сутки
-    .search__date-inputs
-      .date-input
-        +input('xsmall', '19.08.2019', false, {
-          existence: true,
-          open: false
-        }, 'прибытие', 'regular')
-      +input('xsmall', '23.08.2019', false, {
-        existence: true,
-        open: false
-      }, 'выезд', 'regular')
-    .search__guests.booking__guests
-      +input('big', '3 гостя', false, {
-        existence: true,
-        open: false
-      }, 'гости', 'regular')
-    .search-text
-      .search-text__left
+    .booking__header
+      +numberData(888, true, true, '9 990')
+    .booking__search
+      +bookingData('19.08.2019', '23.08.2019', '3 гостя')
+    .booking-text
+      .booking-text__left
         | 9 990₽ х 4 суток
-      .search-text__right
+      .booking-text__right
         | 39 960₽
-    .search-text
-      .search-text__left
-        .search-left
+    .booking-text
+      .booking-text__left
+        .booking-left
           | Сбор за услуги: скидка 2 179₽
           +info()
-      .search-text__right
+      .booking-text__right
         | 0₽
-    .search-text.search-text--last
-      .search-text__left
-        .search-left
+    .booking-text.booking-text--last
+      .booking-text__left
+        .booking-left
           | Сбор за дополнительные услуги
           +info()
-      .search-text__right
+      .booking-text__right
         | 300₽
     .booking__total.booking-total
       .booking-total__text

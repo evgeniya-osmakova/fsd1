@@ -1,0 +1,20 @@
+.bookingData {
+  display: flex;
+  flex-direction: column;
+
+  &__dates {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__guests {
+    margin-left: 30px;
+  }
+}
+
+.arrival {
+  margin-right: 20px;
+}

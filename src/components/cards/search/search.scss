@@ -19,24 +19,8 @@
     width: 300px;
   }
 
-  &__date-inputs {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 30px;
-    margin-bottom: 20px;
-  }
-
-  &__guests {
-    margin-bottom: 30px;
-    margin-left: 30px;
-  }
-
   &__btn {
+    margin-top: 30px;
     margin-left: 30px;
   }
-}
-
-.date-input {
-  margin-right: 20px;
 }

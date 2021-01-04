@@ -1,0 +1,21 @@
+mixin numberData(number, isBig, isLux, price)
+  .number-data
+    .room-number
+      .room-number__symbol
+        | №
+      if isBig
+        .room-number__number.room-number__number--big
+          | #{number}
+      else
+        .room-number__number.room-number__number--regular
+          | #{number}
+
+      if isLux
+        .room-type
+          | люкс
+
+    .room-price
+      .room-price__number
+        | #{price}₽
+      .room-price__clarification
+        | в сутки
