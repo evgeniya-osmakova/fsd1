@@ -1,14 +1,14 @@
 mixin registration()
-  .registration
+  form.registration
     .registration__title
       | Регистрация аккаунта
     .registration__name
-      +input('big', 'Имя', false, {
+      +input('text', 'big', 'Имя', false, {
         existence: false,
         open: false
       }, '', 'regular')
     .registration__surname
-      +input('big', 'Фамилия', false, {
+      +input('text', 'big', 'Фамилия', false, {
         existence: false,
         open: false
       }, '', 'regular')
@@ -17,26 +17,26 @@ mixin registration()
       .registration__sex--last
         +radio('Женщина', false)
     .registration__birthday
-      +input('big', 'ДД.ММ.ГГГГ', false, {
+      +input('date', 'big', 'ДД.ММ.ГГГГ', false, {
         existence: false,
         open: false
       }, 'дата рождения', 'regular')
     .registration__login
-      +input('big', 'Email', false, {
+      +input('email', 'big', 'Email', false, {
         existence: false,
         open: false
       }, 'данные для входа в сервис', 'regular')
     .registration__password
-      +input('big', 'Пароль', false, {
+      +input('password', 'big', 'Пароль', false, {
         existence: false,
         open: false
       }, '', 'regular')
     .registration__promo
       +toggle('Получать спецпредложения', false)
     .registration__btn
-      +button('body-btn', true, 'перейти к оплате', '', 'big')
+      +button('submit', 'body-btn', true, 'перейти к оплате', '', 'big')
     .registration__sign-in.sign-in
       .sign-in__text
         | Уже есть аккаунт на Toxin
       .sign-in__btn
-        +button('body-btn', false, 'войти', '', 'small')
+        +button('button', 'body-btn', false, 'войти', '', 'small')

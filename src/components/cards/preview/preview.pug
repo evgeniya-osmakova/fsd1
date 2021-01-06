@@ -1,7 +1,7 @@
 mixin preview(img, number, isLux, price, stars, reviewsCount, withArrows)
   .preview
     .preview__top
-      img.preview-img(src=`img/${img}`)
+      img.preview-img(src=`img/${img}` alt="room")
 
       if withArrows
         .preview-arrow

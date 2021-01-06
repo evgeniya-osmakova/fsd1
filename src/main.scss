@@ -1,6 +1,6 @@
 @import '../public/styles/variables.scss';
-//$fa-font-path: "~font-awesome/fonts/";
-//@import "~font-awesome/scss/font-awesome";
+@import '../public/styles/common.scss';
+
 @import './components/cards/search/search.scss';
 @import './components/cards/registration/registration.scss';
 @import './components/cards/signIn/signIn.scss';
@@ -23,6 +23,7 @@
 @import './components/form_elements/linkBtn/linkBtn.scss';
 @import './components/form_elements/pagination/pagination.scss';
 @import './components/form_elements/numberData/numberData.scss';
+@import './components/form_elements/datepicker/datepicker.scss';
 
 @import './components/headers_footers/footer/copyright';
 @import './components/headers_footers/footer/footer.scss';
@@ -31,10 +32,13 @@
 @import './components/headers_footers/header/headerBefore.scss';
 @import './components/headers_footers/header/headerAfter.scss';
 
-@import './pages/cards/cards.scss';
-@import './pages/colors_and_type/colors_and_type.scss';
-@import './pages/headers_and_footers/headers_and_footers.scss';
-@import './pages/form-elements/form-elements.scss';
-@import './pages/templates/ui-kit-template.scss';
+@import 'pages/uiKit/cards/cards.scss';
+@import 'pages/uiKit/colors_and_type/colors_and_type.scss';
+@import 'pages/uiKit/headers_and_footers/headers_and_footers.scss';
+@import 'pages/uiKit/form-elements/form-elements.scss';
+@import 'pages/uiKit/templates/ui-kit-template.scss';
+@import 'pages/uiKit/form-elements/datepicker.scss';
 
-//@import '../public/fonts/fonts';
+@import 'pages/website/templates/website.scss';
+@import 'pages/website/landing/landing.scss';
+@import 'pages/website/registration/registration.scss';

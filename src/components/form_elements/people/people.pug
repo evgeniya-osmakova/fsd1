@@ -1,6 +1,6 @@
 mixin people(img, title, text)
   .people
-    img.people__img(src=`img/${img}`)
+    img.people__img(src=`img/${img}` img="photo")
     .people__body.peoples-body
       .people-body__title
         | #{title}

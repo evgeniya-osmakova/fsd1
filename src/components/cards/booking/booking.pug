@@ -4,7 +4,7 @@ mixin booking()
       .info-icon__text
         | i
 
-  .booking
+  form.booking
     .booking__header
       +numberData(888, true, true, '9 990')
     .booking__search
@@ -35,4 +35,4 @@ mixin booking()
       .booking-total__text
         |38 081₽
     .booking__btn
-      +button('body-btn', true, 'забронировать', '', 'big')
+      +button('submit', 'body-btn', true, 'забронировать', '', 'big')

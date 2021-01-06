@@ -1,7 +1,8 @@
-mixin input(size, placeholder, arrow, dropdown, title, hover, clarification)
+mixin input(type, size, placeholder, arrow, dropdown, title, hover, clarification)
   -const inputSize = `input-area--${size}`
   -const inputHover = `input--${hover}`
   -const inputBorderType = (dropdown.open) ? `input--half-border-radius` : `input--full-border-radius`
+  -const datePicker = (type === 'date' && dropdown.existence) ? 'datepicker-here' : ''
 
     if title
       .input-area(class = inputSize)
@@ -10,19 +11,19 @@ mixin input(size, placeholder, arrow, dropdown, title, hover, clarification)
           .input-top__clarification #{clarification}
         if arrow
           .input-area__bottom
-            input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+            input.input(type = type, class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
             i.material-icons.input-arrow arrow_forward
         else if dropdown.existence
           .input-area__bottom
-            input.input.input--dropdown(type = "text", disabled, class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+            input.input.input--dropdown(type = type, disabled, class = `${inputHover} ${inputBorderType} ${datePicker}`, placeholder = placeholder)
             i.material-icons.input-expansion(id="dropdown") expand_more
         else
-          input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+          input.input(type = type, class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
     else
       .input-area(class = inputSize)
         if arrow
           .input-area__bottom
-            input.input.input--absolute(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+            input.input.input--absolute(type = type, class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
             i.material-icons.input-arrow arrow_forward
         else
-          input.input(type = "text", class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)
+          input.input(type = type, class = `${inputHover} ${inputBorderType}`, placeholder = placeholder)

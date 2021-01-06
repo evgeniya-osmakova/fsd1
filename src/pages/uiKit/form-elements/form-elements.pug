@@ -1,30 +1,32 @@
 extends ../templates/ui-kit-template
-include ../../components/components
+include ../../../components/components
 
 block content
   .form-elements
+    input(type='text' class='datepicker-here')
+    input(type='text' class="datepicker-here" data-position="right top")
     .top-row
       .left-column
         .left-column__item-1
-          +input('big', 'Email', false, { existence: false }, 'Text Field', 'regular', 'Default')
+          +input('email', 'big', 'Email', false, { existence: false }, 'Text Field', 'regular', 'Default')
         .left-column__item-2
-          +input('big', 'This is pretty awesome', false, { existence: false }, 'Text Field', 'hovered', 'Hover / Focus')
+          +input('text', 'big', 'This is pretty awesome', false, { existence: false }, 'Text Field', 'hovered', 'Hover / Focus')
         .left-column__item-3
-          +input('big', 'Сколько гостей', false, { existence: true, open: false }, 'Dropdown', 'regular')
+          +input('text','big', 'Сколько гостей', false, { existence: true, open: false }, 'Dropdown', 'regular')
         .left-column__item-4
-          +input('big', 'ДД.ММ.ГГГГ', false, { existence: false }, 'masked text field', 'regular')
+          +input('date','big', 'ДД.ММ.ГГГГ', false, { existence: false }, 'masked text field', 'regular')
         .left-column__item-5
           .left-column__item-5--fitst-elem
-            +input('xsmall', 'ДД.ММ.ГГГГ', false, { existence: true, open: false }, 'date dropdown', 'regular')
-          +input('xsmall', '19.08.2019', false, { existence: true, open: false }, 'date dropdown', 'regular')
+            +input('date','xsmall', 'ДД.ММ.ГГГГ', false, { existence: true, open: false }, 'date dropdown', 'regular')
+          +input('date','xsmall', '19.08.2019', false, { existence: true, open: false }, 'date dropdown', 'regular')
         .left-column__item-6
-          +input('medium', '19 авг - 23 авг', false, { existence: true, open: false }, 'filter date dropdown', 'regular')
+          +input('text', 'medium', '19 авг - 23 авг', false, { existence: true, open: false }, 'filter date dropdown', 'regular')
         .left-column__item-7
-          +input('medium', 'Email', true, { existence: false }, 'subscription text field', 'regular')
+          +input('email', 'medium', 'Email', true, { existence: false }, 'subscription text field', 'regular')
         .left-column__item-8
-          +input('medium', '2 спальни, 2 кровати...', false, { existence: true, open: true }, 'dropdown', 'regular', 'default')
+          +input('text', 'medium', '2 спальни, 2 кровати...', false, { existence: true, open: true }, 'dropdown', 'regular', 'default')
         .left-column__item-9
-          +input('medium', '2 спальни, 2 кровати...', false, {
+          +input('text', 'medium', '2 спальни, 2 кровати...', false, {
             existence: true,
             open: true
           }, 'dropdown', 'hovered', 'expanded')
@@ -80,7 +82,7 @@ block content
             .middle-column__item-5--last
               +rate(5)
         .middle-column__item-6
-          +input('big', 'Сколько гостей', false, {
+          +input('text', 'big', 'Сколько гостей', false, {
             existence: true,
             open: true
           }, 'dropdown', 'hovered')
@@ -101,24 +103,24 @@ block content
           .form-elements__header
             | buttons
           .right-item-2__btns
-            +button('body-btn', true, 'CLICK ME', '', 'small')
+            +button('button', 'body-btn', true, 'CLICK ME', '', 'small')
             .right-item-2__btns--last
-              +button('body-btn', true, 'CLICK ME', 'dim', 'small')
+              +button('button', 'body-btn', true, 'CLICK ME', 'dim', 'small')
           .right-item-2__btns
-            +button('body-btn', false, 'CLICK ME', '', 'small')
+            +button('button', 'body-btn', false, 'CLICK ME', '', 'small')
             .right-item-2__btns--last
-              +button('body-btn', false, 'CLICK ME', 'dim', 'small')
+              +button('button', 'body-btn', false, 'CLICK ME', 'dim', 'small')
           .right-item-2__btns
             +linkBtn(false, 'CLICK ME')
             .right-item-2__btns--last
               +linkBtn(true, 'CLICK ME')
-          +button('body-btn', true, 'перейти к оплате', '', 'big')
+          +button('button', 'body-btn', true, 'перейти к оплате', '', 'big')
         .right-column__item-3
           .form-elements__header
             | pagination
           +pagination()
         .right-column__item-4
-          +input('big', '3 гостя', false, {
+          +input('text', 'big', '3 гостя', false, {
             existence: true,
             open: true
           }, 'dropdown', 'hovered')

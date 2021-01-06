@@ -1,6 +1,6 @@
 mixin header(type)
   .header
-    img.header-logo(src="img/logo-big.svg")
+    img.header-logo(src="img/logo-big.svg" alt="logo")
     .header-links
       p.header-link.header-link--chosen О нас
       .icon_down.header-link.header-link--regular
@@ -11,12 +11,13 @@ mixin header(type)
       .icon_down.header-link.header-link--regular.header-link--last
         p Соглашения
         i.material-icons keyboard_arrow_down
+
       if type === 'before'
         .btns
           .header-link
-            +button('header-btn', false, 'Войти')
+            +button('button', 'header-btn', false, 'Войти')
           .header-link
-            +button('header-btn', true, 'Зарегистрироваться')
+            +button('button', 'header-btn', true, 'Зарегистрироваться')
       else
         .signs
           .signs__line.header-link

@@ -33,7 +33,8 @@ function generateHtmlPlugins(templateDir) {
     })
     .filter((item) => !!item);
 }
-const htmlPlugins = generateHtmlPlugins("./src/pages");
+const htmlPlugins = generateHtmlPlugins("./src/pages/uiKit");
+const htmlPlugins2 = generateHtmlPlugins("./src/pages/website");
 
 module.exports = {
   mode: 'development',
@@ -149,15 +150,16 @@ module.exports = {
       ]
     }),
     new CleanWebpackPlugin(),
-    // ...htmlPlugins,
-    new HtmlWebpackPlugin({
-      template: './src/pages/cards/cards.pug',
-      minify: false,
-    }),
+    ...htmlPlugins,
+    ...htmlPlugins2,
+    // new HtmlWebpackPlugin({
+    //   template: './src/pages/website/landing/landing.pug',
+    //   minify: false,
+    // }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
-      "window.jQuery": "jquery",
+      "window.$": "jquery"
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
