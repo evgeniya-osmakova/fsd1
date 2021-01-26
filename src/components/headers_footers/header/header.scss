@@ -8,17 +8,35 @@
   height: 70px;
 }
 
+.header__short {
+  margin-left: 50px;
+  cursor: pointer;
+
+  @media (min-width: 1201px) {
+    display: none;
+  }
+}
+
 .header-logo {
   margin-left: 140px;
+
+  @media (max-width: 1201px) {
+    margin-right: 50px;
+    margin-left: 0;
+  }
 }
 
 .header-links {
   display: flex;
   @include bodyText;
   align-items: center;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 
-.header-link{
+.header-link {
   margin-right: 20px;
   cursor: pointer;
 

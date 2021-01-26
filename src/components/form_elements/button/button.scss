@@ -7,15 +7,15 @@
 }
 
 .header-btn {
-  &--white {
+  &--white-small {
     @extend .white;
-    width: 192px;
+    width: 85px;
     height: 30px;
   }
 
-  &--gradient {
+  &--gradient-big {
     @extend .gradient;
-    width: 85px;
+    width: 192px;
     height: 34px;
   }
 }

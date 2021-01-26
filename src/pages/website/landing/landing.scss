@@ -1,0 +1,22 @@
+.landing-content {
+  background-image: url('./img/background.jpg');
+  background-position: center;
+  min-height: 830px;
+  height: 100%;
+  background-size: cover;
+}
+
+.landing-search {
+  padding-top: 70px;
+  margin-left: 140px;
+}
+
+.landing-text {
+  @include bodyText;
+  color: $dark75;
+  text-align: right;
+  margin-right: 140px;
+  margin-top: 320px;
+  margin-left: auto;
+  max-width: 270px;
+}

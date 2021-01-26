@@ -2,12 +2,12 @@ mixin bookingData(arrivalDate, departureDate, guests)
   .bookingData
     .bookingData__dates
       .arrival
-        +input('date', 'xsmall', arrivalDate, false, {
+        +input('text', 'xsmall', arrivalDate, false, {
           existence: true,
           open: false
         }, 'прибытие', 'regular')
       .departure
-        +input('date', 'xsmall', departureDate, false, {
+        +input('text', 'xsmall', departureDate, false, {
           existence: true,
           open: false
         }, 'выезд', 'regular')

@@ -17,7 +17,7 @@ mixin registration()
       .registration__sex--last
         +radio('Женщина', false)
     .registration__birthday
-      +input('date', 'big', 'ДД.ММ.ГГГГ', false, {
+      +input('text', 'big', 'ДД.ММ.ГГГГ', false, {
         existence: false,
         open: false
       }, 'дата рождения', 'regular')

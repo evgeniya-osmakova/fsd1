@@ -4,6 +4,7 @@
   border-left: 1px solid $dark50;
   border-right: 1px solid $dark50;
   border-radius: 0 0 2px 2px;
+  box-shadow: 0 10px 20px $dark5;
 
   &--small {
     width: 266px;
@@ -61,14 +62,22 @@
   &__count {
     margin-top: 6px;
     margin-left: 5px;
-    margin-right: 15px;
+    margin-right: 5px;
+    min-width: 15px;
   }
 
   &__modifier {
     width: 30px;
-    border: 1px solid $dark25;
     border-radius: 50%;
     //margin-bottom: 7px;
+
+    &--inactive {
+      border: 1px solid $dark5;
+    }
+
+    &--active {
+      border: 1px solid $dark25;
+    }
 
     &::before {
       content: "";

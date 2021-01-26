@@ -99,7 +99,7 @@
 .checkbox-label input:checked ~ .checkbox-label__new::after {
   //z-index: 1;
   display: block;
-  background-image: url(../public/images/check.svg);
+  background-image: url(./img/check.svg);
   background-size: cover;
   position: absolute;
   left: 3px;

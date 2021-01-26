@@ -78,7 +78,7 @@
   //background: rgba(92, 196, 239, 0.1);
   //color: #4a4a4a;
   //border-radius: 0;
-  &:before {
+  &::before {
     z-index: -1;
     content: "";
     position: absolute;
@@ -106,7 +106,7 @@
   background-color: $lg-purple;
   border-radius: 50%;
 
-  &:before {
+  &::before {
     z-index: -1;
     content:"";
     position:absolute;
@@ -122,7 +122,7 @@
   background-color: $lg-purple;
   border-radius: 50%;
 
-  &:before {
+  &::before {
     z-index: -1;
     content:"";
     position:absolute;
@@ -197,17 +197,21 @@
 
 .datepicker--cell-month {
   width: 33.33%;
-  height: 25%; }
+  height: 25%;
+}
 
 .datepicker--years {
-  height: 170px; }
+  height: 170px;
+}
 
 .datepicker--cells-years {
-  height: 170px; }
+  height: 170px;
+}
 
 .datepicker--cell-year {
   width: 25%;
-  height: 33.33%; }
+  height: 33.33%;
+}
 
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
   color: $dark25; }
@@ -235,10 +239,14 @@
 .datepickers-container {
   position: absolute;
   left: 0;
-  top: 0; }
+  top: 0;
+}
+
 @media print {
   .datepickers-container {
-    display: none; } }
+    display: none;
+  }
+}
 
 .datepicker {
   background: #fff;
@@ -280,7 +288,8 @@
   right: auto;
   opacity: 1;
   -webkit-transform: none;
-  transform: none; }
+  transform: none;
+}
 
 .datepicker-inline .datepicker--pointer {
   display: none;

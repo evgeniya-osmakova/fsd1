@@ -1,21 +1,23 @@
-mixin dropdown(data, size, clear, apply)
-  -const dropdownWhite = `dropdown-menu--${size}`
-  -const dropdownHeight = (clear || apply) ? `dropdown-menu--long` : `dropdown-menu--short`
+mixin dropdown(data, size, clear, apply, type)
+  -const dropdownWhite = `dropdown-menu--${size}`;
+  -const dropdownHeight = (clear || apply) ? `dropdown-menu--long` : `dropdown-menu--short`;
+  -const dropdownType = (type === 'guests') ? 'guests' : 'comfort';
+  -const dropdownActive = (value) => (value === 0) ? 'dropdown-item__modifier--inactive' : 'dropdown-item__modifier--active';
 
-    .dropdown-menu(class = `${dropdownWhite} ${dropdownHeight}`)
+    .dropdown-menu(class = `${dropdownWhite} ${dropdownHeight}` data-type=dropdownType)
       each item in data
         .dropdown-menu__item.dropdown-item
           .dropdown-item__name.dropdown-item__text
             |#{item.name}
           .dropdown-item__counter
-            .dropdown-item__simbol
-              .dropdown-item__modifier
+            .dropdown-item__simbol(data-type='minus')
+              .dropdown-item__modifier(class=dropdownActive(item.count))
               .dropdown-item__simbol--minus
                 |-
             .dropdown-item__count.dropdown-item__text
               |#{item.count}
-            .dropdown-item__simbol
-              .dropdown-item__modifier
+            .dropdown-item__simbol(data-type='plus')
+              .dropdown-item__modifier.dropdown-item__modifier--active
               .dropdown-item__simbol--plus
                 |+
       if apply && clear

@@ -14,6 +14,9 @@ html(lang="en")
     block style
       link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
   body
-    +headerBefore()
-    block content
-    +footer()
+    header.website-header
+      +headerBefore('./registration.html', './signIn.html')
+    main.website-content
+      block content
+    footer.website-footer
+      +footer()

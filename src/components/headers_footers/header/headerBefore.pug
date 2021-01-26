@@ -1,5 +1,5 @@
 include ../../form_elements/button/button
 include ./header
 
-mixin headerBefore()
- +header('before')
+mixin headerBefore(registrationLink, signInLink)
+ +header('before', registrationLink, signInLink)

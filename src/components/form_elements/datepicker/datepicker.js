@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-shadow-restricted-names
+/* eslint-disable */
+
 (function (window, $, undefined) {
   (function () {
     const VERSION = '2.2.3';

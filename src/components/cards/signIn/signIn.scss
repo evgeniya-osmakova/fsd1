@@ -9,6 +9,7 @@
   align-items: flex-start;
   justify-content: center;
   padding-left: 30px;
+  background: #ffffff;
 
   &__title {
     @include h1Text;

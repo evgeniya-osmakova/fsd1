@@ -3,8 +3,6 @@ include ../../../components/components
 
 block content
   .form-elements
-    input(type='text' class='datepicker-here')
-    input(type='text' class="datepicker-here" data-position="right top")
     .top-row
       .left-column
         .left-column__item-1
@@ -14,11 +12,11 @@ block content
         .left-column__item-3
           +input('text','big', 'Сколько гостей', false, { existence: true, open: false }, 'Dropdown', 'regular')
         .left-column__item-4
-          +input('date','big', 'ДД.ММ.ГГГГ', false, { existence: false }, 'masked text field', 'regular')
+          +input('text','big', 'ДД.ММ.ГГГГ', false, { existence: false }, 'masked text field', 'regular', '', true)
         .left-column__item-5
           .left-column__item-5--fitst-elem
-            +input('date','xsmall', 'ДД.ММ.ГГГГ', false, { existence: true, open: false }, 'date dropdown', 'regular')
-          +input('date','xsmall', '19.08.2019', false, { existence: true, open: false }, 'date dropdown', 'regular')
+            +input('text','xsmall', 'ДД.ММ.ГГГГ', false, { existence: true, open: false }, 'date dropdown', 'regular')
+          +input('text','xsmall', '19.08.2019', false, { existence: true, open: false }, 'date dropdown', 'regular')
         .left-column__item-6
           +input('text', 'medium', '19 авг - 23 авг', false, { existence: true, open: false }, 'filter date dropdown', 'regular')
         .left-column__item-7

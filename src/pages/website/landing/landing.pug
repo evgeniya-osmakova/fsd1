@@ -2,5 +2,8 @@ extends ../templates/website
 include ../../../components/components
 
 block content
-  |djdkj
-  a(href='./registration.html') Google
+  .landing-content
+    .landing-search
+      +search()
+    .landing-text
+      |Лучшие номера для вашей работы, отдыха и просто вдохновения

@@ -1,5 +1,6 @@
-mixin header(type)
+mixin header(type, registrationLink, signInLink)
   .header
+    i.material-icons.header__short menu
     img.header-logo(src="img/logo-big.svg" alt="logo")
     .header-links
       p.header-link.header-link--chosen О нас
@@ -15,9 +16,11 @@ mixin header(type)
       if type === 'before'
         .btns
           .header-link
-            +button('button', 'header-btn', false, 'Войти')
+            a(href=signInLink)
+              +button('button', 'header-btn', false, 'Войти', '', 'small')
           .header-link
-            +button('button', 'header-btn', true, 'Зарегистрироваться')
+            a(href=registrationLink)
+              +button('button', 'header-btn', true, 'Зарегистрироваться', '', 'big')
       else
         .signs
           .signs__line.header-link
