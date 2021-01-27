@@ -1,8 +1,7 @@
 .landing-content {
   background-image: url('./img/background.jpg');
-  background-position: center;
-  min-height: 830px;
-  height: 100%;
+  background-position: bottom;
+  height: 830px;
   background-size: cover;
 }
 
@@ -15,8 +14,8 @@
   @include bodyText;
   color: $dark75;
   text-align: right;
-  margin-right: 140px;
-  margin-top: 320px;
+  margin-right: 135px;
+  margin-top: 318px;
   margin-left: auto;
   max-width: 270px;
 }

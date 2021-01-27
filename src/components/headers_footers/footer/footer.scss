@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     min-height: $footer-mobile-height;
   }
 
@@ -32,7 +32,7 @@
     justify-content: flex-start;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     display: none;
   }
 }
@@ -85,7 +85,7 @@
     }
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     height: $footer-mobile-height;
   }
 
