@@ -3,34 +3,69 @@ mixin registration()
     .registration__title
       | Регистрация аккаунта
     .registration__name
-      +input('text', 'big', 'Имя', false, {
-        existence: false,
-        open: false
-      }, '', 'regular')
+      +input({
+        type: 'text',
+        size: 'big',
+        placeholder: 'Имя',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: '',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .registration__surname
-      +input('text', 'big', 'Фамилия', false, {
-        existence: false,
-        open: false
-      }, '', 'regular')
+      +input({
+        type: 'text',
+        size: 'big',
+        placeholder: 'Фамилия',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: '',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .registration__sex
       +radio('Мужчина', true)
       .registration__sex--last
         +radio('Женщина', false)
     .registration__birthday
-      +input('text', 'big', 'ДД.ММ.ГГГГ', false, {
-        existence: false,
-        open: false
-      }, 'дата рождения', 'regular')
+      +input({
+        type: 'text',
+        size: 'big',
+        placeholder: 'ДД.ММ.ГГГГ',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: 'дата рождения',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .registration__login
-      +input('email', 'big', 'Email', false, {
-        existence: false,
-        open: false
-      }, 'данные для входа в сервис', 'regular')
+      +input({
+        type: 'email',
+        size: 'big',
+        placeholder: 'Email',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: 'данные для входа в сервис',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .registration__password
-      +input('password', 'big', 'Пароль', false, {
-        existence: false,
-        open: false
-      }, '', 'regular')
+      +input({
+        type: 'password',
+        size: 'big',
+        placeholder: 'Пароль',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: '',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .registration__promo
       +toggle('Получать спецпредложения', false)
     .registration__btn

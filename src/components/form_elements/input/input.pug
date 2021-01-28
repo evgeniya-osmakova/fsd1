@@ -1,7 +1,9 @@
-mixin input(type, size, placeholder, arrow, dropdown, title, hover, clarification, isMasked)
+mixin input(option)
+  -const { type, size, placeholder, arrow, dropdown, title, hover, clarification, isMasked } = option;
   -const inputSize = `input-area--${size}`;
   -const inputHover = `input--${hover}`;
   -const inputBorderType = (dropdown.open) ? `input--half-border-radius` : `input--full-border-radius`;
+  -const arrowOpacity = (dropdown.open) ? `input-expansion--bright` : `input-expansion--dim`;
   -const datePicker = (type === 'date' && dropdown.existence) ? 'datepicker-here' : '';
   -const maskedType = (isMasked) ? 'masked' : 'regular';
 
@@ -17,7 +19,7 @@ mixin input(type, size, placeholder, arrow, dropdown, title, hover, clarificatio
         else if dropdown.existence
           .input-area__bottom
             input.input.input--dropdown(type = type, disabled, class = `${inputHover} ${inputBorderType} ${datePicker}`, placeholder = placeholder)
-            i.material-icons.input-expansion(data-type='dropdown') expand_more
+            i.material-icons.input-expansion(data-type='dropdown' class=`${arrowOpacity}`) expand_more
         else
           input.input(type = type, class = `${inputHover} ${inputBorderType}`, placeholder=placeholder, data-type=maskedType)
     else

@@ -38,23 +38,25 @@
   color: $purple;
   text-transform: uppercase;
   line-height: 15px;
+  margin-left: 8px;
 }
 
 .room-price {
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  color: $dark50;
 
   &__number {
     @include h3Text;
+    color: $dark50;
     font-size: 14px;
     line-height: 18px;
   }
 
   &__clarification {
     @include bodyText;
-    margin-left: 5px;
+    color: $dark50;
+    margin-left: 4px;
     font-size: 12px;
     line-height: 18px;
   }

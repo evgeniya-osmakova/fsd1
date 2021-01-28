@@ -3,15 +3,29 @@ mixin signIn ()
     .signIn__title
       | Войти
     .signIn__email
-      +input('email', 'big', 'Email', false, {
-        existence: false,
-        open: false
-      }, '', 'regular')
+      +input({
+        type: 'email',
+        size: 'big',
+        placeholder: 'Email',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: '',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .signIn__password
-      +input('password', 'big', 'Пароль', false, {
-        existence: false,
-        open: false
-      }, '', 'regular')
+      +input({
+        type: 'password',
+        size: 'big',
+        placeholder: 'Пароль',
+        arrow: false,
+        dropdown: {existence: false, open: false},
+        title: '',
+        hover: 'regular',
+        clarification: '',
+        isMasked: false,
+      })
     .signIn__btn
       +button('submit', 'body-btn', true, 'Войти', '', 'big')
     .signIn__creating-acc.creating-acc

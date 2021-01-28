@@ -44,7 +44,17 @@ mixin footer()
         lable.footer-text--dark
           |Получайте специальные предложения и новости сервиса
           .input-and-icon
-            +input('email', 'small', 'Email', true, { existence: false }, '', 'regular')
+            +input({
+              type: 'email',
+              size: 'small',
+              placeholder: 'Email',
+              arrow: true,
+              dropdown: {existence: false, open: false},
+              title: '',
+              hover: 'regular',
+              clarification: '',
+              isMasked: false,
+            })
     .footer-bottom
       .footer-bottom__copyright
         |Copyright © 2018 Toxin отель. Все права зачищены.

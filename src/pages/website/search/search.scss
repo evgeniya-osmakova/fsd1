@@ -1,0 +1,123 @@
+$max-width-pc: 1160px;
+$width-mobile: 660px;
+
+.search-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 71px;
+  border-bottom: 1px solid $dark25;
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 140px;
+    margin-right: 59px;
+    margin-top: 30px;
+
+    @media (max-width: $max-width-pc) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 50px;
+    }
+
+    @media (max-width: $width-mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__rooms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 128px;
+    margin-top: 36px;
+
+    @media (max-width: $max-width-pc) {
+      margin: 50px;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: $max-width-pc) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $width-mobile) {
+    align-items: center;
+  }
+}
+
+.filter {
+  &__date {
+    margin-bottom: 20px;
+  }
+
+  &__guests {
+    margin-bottom: 30px;
+  }
+
+  &__rools {
+    margin-bottom: 25px;
+  }
+
+  &__accessibility {
+    margin-bottom: 20px;
+  }
+
+  &__comfort {
+    margin-bottom: 25px;
+  }
+
+  &--last {
+    @media (max-width: $max-width-pc) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $max-width-pc) {
+    margin-right: 10px;
+  }
+}
+
+  .rooms-header {
+    @include h3Text;
+    font-size: 24px;
+    color: $dark100;
+    margin-bottom: 30px;
+    margin-right: auto;
+
+    @media (max-width: $max-width-pc) {
+      margin-left: auto;
+    }
+
+    @media (max-width: $width-mobile) {
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+
+  .rooms-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &__card {
+      margin-right: 12px;
+      margin-bottom: 21px;
+    }
+
+    @media (max-width: $max-width-pc) {
+      justify-content: center;
+    }
+  }
+
+  .pages {
+    margin-right: 29px;
+    //margin-bottom: 70px;
+  }
+

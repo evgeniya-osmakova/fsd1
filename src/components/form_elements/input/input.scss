@@ -119,9 +119,18 @@
 .input-expansion {
   position: absolute;
   right: 10px;
-  background: $dark50;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   cursor: pointer;
   font-size: 24px;
+
+  &--bright {
+    background: $dark75;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--dim {
+    background: $dark50;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

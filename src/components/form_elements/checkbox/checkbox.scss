@@ -2,12 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 
   &__title {
     @include h3Text;
     text-transform: uppercase;
-    margin-right: 30px;
+    margin-right: 24px;
     color: #1F2041;
   }
 
@@ -24,7 +24,7 @@
   cursor: pointer;
   user-select: none;
   //max-width: 245px;
-  padding-bottom: 13px;
+  padding-bottom: 11px;
 
   &__header {
     @include h3Text;
@@ -69,7 +69,7 @@
     width: 20px;
     height: 20px;
     border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 2px;
+    border-radius: 4px;
     display: flex;
     //margin-top: 2px;
     //margin-bottom: 100px;
@@ -102,7 +102,7 @@
   background-image: url(./img/check.svg);
   background-size: cover;
   position: absolute;
-  left: 3px;
+  left: 4px;
   top: 3px;
 }
 

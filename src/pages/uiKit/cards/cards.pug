@@ -17,6 +17,22 @@ block content
       .cards-right__item-1
         .datepicker-here(id='cards-datepicker')
       .cards-right__item-2
-        +preview('room1.jpg', 888, true, '9 990', 5, 145, true)
+        +preview({
+          img: 'room1.jpg',
+          number: 888,
+          isLux: true,
+          price: '9 990',
+          stars: 5,
+          reviewsCount: 145,
+          withArrows: true,
+        })
       .cards-right__item-3
-        +preview('room2.jpg', 840, false, '9 900', 4, 65, false)
+        +preview({
+          img: 'room2.jpg',
+          number: 840,
+          isLux: false,
+          price: '9 900',
+          stars: 4,
+          reviewsCount: 65,
+          withArrows: false,
+        })

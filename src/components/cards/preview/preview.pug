@@ -1,25 +1,29 @@
-mixin preview(img, number, isLux, price, stars, reviewsCount, withArrows)
-  .preview
-    .preview__top
-      img.preview-img(src=`img/${img}` alt="room")
+mixin preview(options)
+  - const { img, number, isLux, price, stars, reviewsCount, withArrows } = options;
 
-      if withArrows
-        .preview-arrow
-          i.material-icons.preview-arrow__img.preview-arrow__img--right expand_more
-          i.material-icons.preview-arrow__img.preview-arrow__img--left expand_more
+    .preview
+      .preview__top
+        img.preview-img(src=`img/${img}` alt="room")
 
-      .preview-dots
-        .preview-dots__dot.preview-dots__dot--color
-        .preview-dots__dot
-        .preview-dots__dot
-        .preview-dots__dot
-    .preview__bottom
-      .number-info
-        +numberData(number, false, isLux, price)
-      .number-rate
-        +rate(stars)
-        .number-rate__review.number-review
-          .number-review__number
-            | #{reviewsCount}
-          .number-review__text
-            | Отзывов
+        if withArrows
+          .preview-shadow.preview-shadow--left
+          .preview-shadow.preview-shadow--right
+          .preview-arrow
+            i.material-icons.preview-arrow__img.preview-arrow__img--right expand_more
+            i.material-icons.preview-arrow__img.preview-arrow__img--left expand_more
+
+        .preview-dots
+          .preview-dots__dot.preview-dots__dot--color
+          .preview-dots__dot
+          .preview-dots__dot
+          .preview-dots__dot
+      .preview__bottom
+        .number-info
+          +numberData(number, false, isLux, price)
+        .number-rate
+          +rate(stars)
+          .number-rate__review.number-review
+            .number-review__number
+              | #{reviewsCount}
+            .number-review__text
+              | Отзывов

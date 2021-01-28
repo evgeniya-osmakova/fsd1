@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 20px $dark50;
+  box-shadow: 0 10px 20px $dark5;
   background: white;
   width: 100vw;
   height: 70px;
@@ -37,17 +37,14 @@
 }
 
 .header-link {
-  margin-right: 20px;
+  margin-right: 21px;
   cursor: pointer;
+  opacity: 0.5;
 
-  &--chosen {
+  &:hover {
     @include h3Text;
     opacity: 0.75;
     font-size: 14px;
-  }
-
-  &--regular {
-    opacity: 0.5;
   }
 }
 
@@ -60,6 +57,10 @@
 .btns {
   display: flex;
   margin-right: 120px;
+}
+
+.header-button {
+  margin-right: 21px;
 }
 
 .signs {

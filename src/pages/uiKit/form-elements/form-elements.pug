@@ -6,28 +6,125 @@ block content
     .top-row
       .left-column
         .left-column__item-1
-          +input('email', 'big', 'Email', false, { existence: false }, 'Text Field', 'regular', 'Default')
+          +input({
+            type: 'email',
+            size: 'big',
+            placeholder: 'Email',
+            arrow: false,
+            dropdown: {existence: false, open: false},
+            title: 'Text Field',
+            hover: 'regular',
+            clarification: 'Default',
+            isMasked: false,
+          })
         .left-column__item-2
-          +input('text', 'big', 'This is pretty awesome', false, { existence: false }, 'Text Field', 'hovered', 'Hover / Focus')
+          +input({
+            type: 'text',
+            size: 'big',
+            placeholder: 'This is pretty awesome',
+            arrow: false,
+            dropdown: {existence: false, open: false},
+            title: 'Text Field',
+            hover: 'hovered',
+            clarification: 'Hover / Focus',
+            isMasked: false,
+          })
         .left-column__item-3
-          +input('text','big', 'Сколько гостей', false, { existence: true, open: false }, 'Dropdown', 'regular')
+          +input({
+            type: 'text',
+            size: 'big',
+            placeholder: 'Сколько гостей',
+            arrow: false,
+            dropdown: {existence: true, open: false},
+            title: 'Dropdown',
+            hover: 'regular',
+            clarification: '',
+            isMasked: false,
+          })
         .left-column__item-4
-          +input('text','big', 'ДД.ММ.ГГГГ', false, { existence: false }, 'masked text field', 'regular', '', true)
+          +input({
+            type: 'text',
+            size: 'big',
+            placeholder: 'ДД.ММ.ГГГГ',
+            arrow: false,
+            dropdown: {existence: false, open: false},
+            title: 'masked text field',
+            hover: 'regular',
+            clarification: '',
+            isMasked: true,
+          })
         .left-column__item-5
           .left-column__item-5--fitst-elem
-            +input('text','xsmall', 'ДД.ММ.ГГГГ', false, { existence: true, open: false }, 'date dropdown', 'regular')
-          +input('text','xsmall', '19.08.2019', false, { existence: true, open: false }, 'date dropdown', 'regular')
+            +input({
+              type: 'text',
+              size: 'xsmall',
+              placeholder: 'ДД.ММ.ГГГГ',
+              arrow: false,
+              dropdown: { existence: true, open: false },
+              title: 'date dropdown',
+              hover: 'regular',
+              clarification: '',
+              isMasked: false,
+            })
+          +input({
+            type: 'text',
+            size: 'xsmall',
+            placeholder: '19.08.2019',
+            arrow: false,
+            dropdown: { existence: true, open: false },
+            title: 'date dropdown',
+            hover: 'regular',
+            clarification: '',
+            isMasked: false,
+          })
         .left-column__item-6
-          +input('text', 'medium', '19 авг - 23 авг', false, { existence: true, open: false }, 'filter date dropdown', 'regular')
+          +input({
+            type: 'text',
+            size: 'medium',
+            placeholder: '19 авг - 23 авг',
+            arrow: false,
+            dropdown: { existence: true, open: false },
+            title: 'filter date dropdown',
+            hover: 'regular',
+            clarification: '',
+            isMasked: false,
+          })
         .left-column__item-7
-          +input('email', 'medium', 'Email', true, { existence: false }, 'subscription text field', 'regular')
+          +input({
+            type: 'email',
+            size: 'medium',
+            placeholder: 'Email',
+            arrow: true,
+            dropdown: { existence: false, open: false },
+            title: 'subscription text field',
+            hover: 'regular',
+            clarification: '',
+            isMasked: false,
+          })
         .left-column__item-8
-          +input('text', 'medium', '2 спальни, 2 кровати...', false, { existence: true, open: true }, 'dropdown', 'regular', 'default')
+          +input({
+            type: 'text',
+            size: 'medium',
+            placeholder: '2 спальни, 2 кровати...',
+            arrow: false,
+            dropdown: { existence: true, open: true },
+            title: 'dropdown',
+            hover: 'regular',
+            clarification: 'default',
+            isMasked: false,
+          })
         .left-column__item-9
-          +input('text', 'medium', '2 спальни, 2 кровати...', false, {
-            existence: true,
-            open: true
-          }, 'dropdown', 'hovered', 'expanded')
+          +input({
+            type: 'text',
+            size: 'medium',
+            placeholder: '2 спальни, 2 кровати...',
+            arrow: false,
+            dropdown: {existence: true, open: true},
+            title: 'dropdown',
+            hover: 'hovered',
+            clarification: 'expanded',
+            isMasked: false,
+          })
           +dropdown([{name: 'спальни', count: 2}, {name: 'кровати', count: 2}, {
             name: 'ванные комнаты',
             count: 0
@@ -80,10 +177,17 @@ block content
             .middle-column__item-5--last
               +rate(5)
         .middle-column__item-6
-          +input('text', 'big', 'Сколько гостей', false, {
-            existence: true,
-            open: true
-          }, 'dropdown', 'hovered')
+          +input({
+            type: 'text',
+            size: 'big',
+            placeholder: 'Сколько гостей',
+            arrow: false,
+            dropdown: {existence: true, open: true},
+            title: 'dropdown',
+            hover: 'hovered',
+            clarification: '',
+            isMasked: false,
+          })
           +dropdown([{name: 'взрослые', count: 0}, {name: 'дети', count: 0}, { name: 'младенцы', count: 0}],
             'big', false, true)
         .middle-column__item-7
@@ -118,10 +222,17 @@ block content
             | pagination
           +pagination()
         .right-column__item-4
-          +input('text', 'big', '3 гостя', false, {
-            existence: true,
-            open: true
-          }, 'dropdown', 'hovered')
+          +input({
+            type: 'text',
+            size: 'big',
+            placeholder: '3 гостя',
+            arrow: false,
+            dropdown: {existence: true, open: true},
+            title: 'dropdown',
+            hover: 'hovered',
+            clarification: '',
+            isMasked: false,
+          })
           +dropdown([{name: 'взрослые', count: 2}, {name: 'дети', count: 1}, {name: 'младенцы', count: 0}],
             'big', true, true)
         .right-column__item-5

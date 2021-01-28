@@ -45,6 +45,22 @@
   }
 }
 
+.preview-shadow {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+  width: 42px;
+  height: 151px;
+  position: absolute;
+  top: 0;
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+    transform: rotate(-180deg);
+  }
+}
 .preview-dots {
   display: flex;
   position: absolute;
@@ -66,13 +82,13 @@
 }
 
 .number-info {
-  padding-top: 19px;
-  padding-bottom: 12px;
+  padding-top: 17px;
+  padding-bottom: 10px;
   border-bottom: 1px solid $dark1;
 }
 
 .number-rate {
-  padding-top: 7px;
+  padding-top: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,18 +100,19 @@
 }
 
 .number-review{
-  color: $dark50;
   margin-right: 4px;
 
   &__number {
     @include h3Text;
+    color: $dark50;
     line-height: 18px;
     font-size: 14px;
   }
 
   &__text {
-    margin-left: 5px;
+    margin-left: 3px;
     @include bodyText;
+    color: $dark50;
     line-height: 18px;
   }
 }
