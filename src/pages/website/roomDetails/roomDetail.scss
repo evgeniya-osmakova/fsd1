@@ -1,0 +1,132 @@
+@mixin headerH3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+  color: $dark100;
+}
+
+.apartments-photos {
+  display: flex;
+  height: 485px;
+  align-items: flex-start;
+}
+
+.big-photo {
+  width: 981px;
+}
+
+.small-photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.apartments-description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.apartments-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  //margin-left: 140px;
+}
+
+.apartments-data {
+  display: flex;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__impression {
+
+  }
+}
+
+.apartments-info {
+  &__header {
+    @include headerH3;
+    margin-bottom: 20px;
+  }
+
+  &__comfort {
+    margin-bottom: 20px;
+  }
+
+  &__convenience {
+    margin-bottom: 20px;
+  }
+
+  &__cosiness {
+    margin-bottom: 30px;
+  }
+}
+
+.apartments-impression {
+  &__header {
+    @include headerH3;
+    margin-left: 81px;
+  }
+}
+
+.apartments-reviews {
+  &__header {
+    @include headerH3;
+    margin-bottom: 20px;
+  }
+
+  &__bio {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 22px;
+  }
+}
+
+.apartments-info {
+  display: flex;
+  align-items: flex-start;
+
+  &__rools {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__canceling {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+  }
+}
+
+.apartments-rools {
+  &__header {
+    @include headerH3;
+  }
+}
+
+.apartments-canceling {
+  &__header {
+    @include headerH3;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 340px;
+    color: $dark75;
+  }
+}
+
+.apartments-booking-block {
+  margin-left: 70px;
+}

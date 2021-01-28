@@ -1,0 +1,50 @@
+extends ../templates/website
+include ../../../components/components
+
+block content
+  .apartments-photos
+    .big-photo
+      img(src="img/apartment1.jpg" alt='room photo')
+    .small-photos
+      img(src="img/apartment2.jpg" alt='room photo')
+      img(src="img/apartment3.jpg" alt='room photo')
+  .apartments-description
+    .apartments-text-block
+      .apartments-data
+        .apartments-data__info.apartments-info
+          h3.apartments-info__header
+            |Сведения о номере
+          .apartments-info__comfort
+            +details('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+          .apartments-info__convenience
+            +details('Удобство', 'Окно в каждой из спален', 'location_city')
+          .apartments-info__cosiness
+            +details('Уют', 'Номер оснащён камином', 'whatshot')
+        .apartments-data__impression.apartments-impression
+          h3.apartments-impression__header
+            |Впечатления от номера
+      .apartments-reviews
+        h3.apartments-reviews__header
+          |Отзывы посетителей номера
+        .apartments-reviews__bio
+          +people('murad.svg', 'Мурад Сарафанов', '5 дней назад')
+        .apartments-reviews__text
+          +review(12, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+        .apartments-reviews__bio
+          +people('patrisia.svg', 'Патрисия Стёклышкова', 'Неделю назад')
+        .apartments-reviews__text
+          +review(2, 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+      .apartments-info
+        .apartments-info__rools.apartments-rools
+          h3.apartments-rools__header
+            |Правила
+          .apartments-rools__list
+          +bulletList('', ['Нельзя с питомцами',
+            'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+        .apartments-info__canceling.apartments-canceling
+          h3.apartments-canceling__header
+            | Отмена
+          p.apartments-canceling__text
+            |Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+    .apartments-booking-block
+      +booking()
