@@ -1,3 +1,5 @@
+$max-width-pc: 450px;
+
 .booking {
   width: 380px;
   height: 511px;
@@ -6,13 +8,13 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   &__header {
     margin-bottom: 23px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-top: 15px;
+    margin-top: 45px;
   }
 
   &__search {
@@ -30,6 +32,11 @@
     align-items: center;
     justify-content: flex-start;
   }
+
+  @media (max-width: $max-width-pc) {
+    width: 300px;
+    height: 650px;
+  }
 }
 
 .booking-text {
@@ -43,8 +50,9 @@
   padding-bottom: 9px;
 
   &--last {
-    padding-bottom: 35px;
+    padding-bottom: 50px;
   }
+
 }
 
 .info-icon {
@@ -53,21 +61,26 @@
   border: 1px solid $dark25;
   border-radius: 50%;
   cursor: pointer;
+  margin-left: 8px;
 
   &__text {
     color: $dark25;
     @include h3Text;
     padding-top: 1px;
-    padding-left: 7px;
+    padding-left: 8px;
   }
 }
 
 .booking-left {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  width: 240px;
+  justify-content: flex-start;
   line-height: 18px;
+  flex-wrap: wrap;
+
+  @media (max-width: $max-width-pc) {
+    width: 170px;
+  }
 }
 
 .booking-total {
@@ -78,9 +91,13 @@
   }
 
   &__dots {
-    width: 182px;
+    width: 175px;
     height: 15px;
     border-bottom: 1px dotted $dark25;
     margin: 0 5px;
+
+    @media (max-width: $max-width-pc) {
+      width: 100px;
+    }
   }
 }

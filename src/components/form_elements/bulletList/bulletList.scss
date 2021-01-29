@@ -23,8 +23,6 @@
 .bullet-item {
   display: grid;
   grid-template-columns: 10px auto;
-  //align-items: center;
-  //justify-content: flex-start;
   padding-bottom: 10px;
 
   &__img {
@@ -40,7 +38,6 @@
   &__text {
     margin-left: 10px;
     color: $dark75;
-    @include bodyText;
     line-height: 24px;
   }
 }

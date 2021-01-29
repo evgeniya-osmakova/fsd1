@@ -1,8 +1,11 @@
-mixin details(title, text, img)
-  .details
-    i.material-icons.details__img #{img}
-    .details__body.details-body
-      .details-body__title
-        |#{title}
-      .details-body__text
-        | #{text}
+mixin details(options)
+  -const { title, text, img, isLastItem } = options;
+  -const bottomBorder = (isLastItem) ? '' : 'details--with-border';
+
+    .details(class=`${bottomBorder}`)
+      i.material-icons.details__img #{img}
+      .details__body.details-body
+        h3.details-body__title
+          |#{title}
+        p.details-body__text
+          | #{text}

@@ -3,8 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1px solid $dark1;
-  padding-bottom: 17px;
 
   &__img {
     background: $lg-purple;
@@ -18,6 +16,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  &--with-border {
+    padding-bottom: 17px;
+    border-bottom: 1px solid $dark1;
+  }
 }
 
 .details-body {
@@ -30,7 +33,6 @@
 
   &__text {
     margin-top: 5px;
-    @include bodyText;
     color: $dark75;
   }
 }

@@ -10,7 +10,6 @@
   &__text {
     max-width: 655px;
     margin-left: 15px;
-    @include bodyText;
     color: $dark75;
   }
 }

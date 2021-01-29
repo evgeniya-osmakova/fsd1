@@ -166,9 +166,9 @@ block content
           .form-elements__header
             | like button
           .middle-item-4__btns
-            +like(2, false)
+            +like({ likes: 2, isHovered: false })
             .middle-column__item-4--last
-              +like(12, true)
+              +like({ likes: 12, isHovered: true })
         .middle-column__item-5
           .form-elements__header
             | rate button
@@ -241,11 +241,25 @@ block content
     .bottom-row
       .bottom-left
         .bottom-left__item-1
-          +details('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+          +details({
+            title: 'Комфорт',
+            text: 'Шумопоглощающие стены',
+            img: 'insert_emoticon',
+            isLastItem: false
+          })
         .bottom-left__item-2
-          +details('Удобство', 'Окно в каждой из спален', 'location_city')
+          +details({
+            title: 'Удобство',
+            text: 'Окно в каждой из спален',
+            img: 'location_city',
+            isLastItem: false
+          })
       .bottom-right
         .bottom-right__item-1
           +people('murad.svg', 'Мурад Сарафанов', '5 дней назад')
         .bottom-right__item-2
-          +review(12, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+          +review({
+            likes: 12,
+            text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+            isHovered: true,
+          })

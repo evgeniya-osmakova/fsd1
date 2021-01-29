@@ -2,7 +2,7 @@ mixin people(img, title, text)
   .people
     img.people__img(src=`img/${img}` img="photo")
     .people__body.peoples-body
-      .people-body__title
+      h3.people-body__title
         | #{title}
-      .people-body__text
+      p.people-body__text
         | #{text}

@@ -2,47 +2,92 @@ extends ../templates/website
 include ../../../components/components
 
 block content
-  .apartments-photos
-    .big-photo
-      img(src="img/apartment1.jpg" alt='room photo')
-    .small-photos
-      img(src="img/apartment2.jpg" alt='room photo')
-      img(src="img/apartment3.jpg" alt='room photo')
+  .apartments-preview
+    .apartments-photos
+      img.big-photo(src="img/apartment1.jpg" alt='room photo')
+      .small-photos
+        img.small-photos--first(src="img/apartment2.jpg" alt='room photo')
+        img.small-photos--second(src="img/apartment3.jpg" alt='room photo')
   .apartments-description
     .apartments-text-block
       .apartments-data
         .apartments-data__info.apartments-info
-          h3.apartments-info__header
+          h2.apartments-info__header
             |Сведения о номере
-          .apartments-info__comfort
-            +details('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
-          .apartments-info__convenience
-            +details('Удобство', 'Окно в каждой из спален', 'location_city')
-          .apartments-info__cosiness
-            +details('Уют', 'Номер оснащён камином', 'whatshot')
+          .apartments-info__item
+            +details({
+              title: 'Комфорт',
+              text: 'Шумопоглощающие стены',
+              img: 'insert_emoticon',
+              isLastItem:  false,
+            })
+          .apartments-info__item
+            +details({
+              title: 'Удобство',
+              text: 'Окно в каждой из спален',
+              img: 'location_city',
+              isLastItem: false,
+            })
+          .apartments-info__item
+            +details({
+              title: 'Уют',
+              text: 'Номер оснащён камином',
+              img: 'whatshot',
+              isLastItem: true,
+            })
         .apartments-data__impression.apartments-impression
-          h3.apartments-impression__header
+          h2.apartments-impression__header
             |Впечатления от номера
+          .apartments-impression__data
+            img(src="img/chart.svg" alt="chart")
+            ul.impression-list
+              li.impression-list__item
+                .impression-list__img.impression-list__img--great
+                p.impression-list__text
+                  | Великолепно
+              li.impression-list__item
+                .impression-list__img.impression-list__img--good
+                p.impression-list__text
+                  | Хорошо
+              li.impression-list__item
+                .impression-list__img.impression-list__img--satisfactorily
+                p.impression-list__text
+                  | Удовлетворительно
+              li.impression-list__item
+                .impression-list__img.impression-list__img--disappointed
+                p.impression-list__text
+                  | Разочарован
       .apartments-reviews
-        h3.apartments-reviews__header
-          |Отзывы посетителей номера
+        .apartments-reviews__header.reviews-header
+          h2.reviews-header__title
+            | Отзывы посетителей номера
+          p.reviews-header__count
+            | 2 отзыва
         .apartments-reviews__bio
           +people('murad.svg', 'Мурад Сарафанов', '5 дней назад')
         .apartments-reviews__text
-          +review(12, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+          +review({
+            likes: 12,
+            text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+            isHovered: true,
+          })
         .apartments-reviews__bio
           +people('patrisia.svg', 'Патрисия Стёклышкова', 'Неделю назад')
         .apartments-reviews__text
-          +review(2, 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-      .apartments-info
-        .apartments-info__rools.apartments-rools
-          h3.apartments-rools__header
+          +review({
+            likes: 2,
+            text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+            isHovered: false,
+          })
+      .apartments-terms
+        .apartments-terms__rools.apartments-rools
+          h2.apartments-rools__header
             |Правила
           .apartments-rools__list
-          +bulletList('', ['Нельзя с питомцами',
-            'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
-        .apartments-info__canceling.apartments-canceling
-          h3.apartments-canceling__header
+            +bulletList('', ['Нельзя с питомцами',
+              'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+        .apartments-terms__canceling.apartments-canceling
+          h2.apartments-canceling__header
             | Отмена
           p.apartments-canceling__text
             |Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

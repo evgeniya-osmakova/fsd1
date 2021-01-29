@@ -1,3 +1,5 @@
+$max-width-pc: 450px;
+
 .input-area {
   display: flex;
   flex-direction: column;
@@ -17,6 +19,10 @@
 
   &--big {
     width: 320px;
+
+    @media (max-width: 450px) {
+      width: 280px;
+    }
   }
 
   &--medium {

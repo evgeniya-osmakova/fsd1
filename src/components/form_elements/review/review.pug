@@ -1,6 +1,8 @@
-mixin review (likes, text)
+mixin review (options)
+  -const { likes, text, isHovered } = options;
+
   .review
     .review__liks
-      +like(12, true)
-    .review__text
+      +like({ likes, isHovered })
+    p.review__text
       | #{text}

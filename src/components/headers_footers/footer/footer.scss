@@ -24,6 +24,7 @@
   column-gap: 40px;
   padding: 104px 140px 100px;
   height: 372px;
+  margin: auto;
 
   &__section {
     display: flex;
@@ -55,12 +56,6 @@
 
 .input-and-icon {
   margin-top: 22px;
-  //display: flex;
-  //justify-content: space-between;
-  //border: 1px solid rgba(31, 32, 65, 0.25);
-  //border-radius: 4px;
-  //width: 260px;
-  //height: 45px;
 }
 
 .footer-bottom {
