@@ -1,5 +1,3 @@
-$max-width-pc: 450px;
-
 .input-area {
   display: flex;
   flex-direction: column;
@@ -8,7 +6,6 @@ $max-width-pc: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //margin-bottom: 5px;
   }
 
   &__bottom {
@@ -20,8 +17,8 @@ $max-width-pc: 450px;
   &--big {
     width: 320px;
 
-    @media (max-width: 450px) {
-      width: 280px;
+    @include media-breakpoint-down(phone) {
+      width: 250px;
     }
   }
 
@@ -46,7 +43,6 @@ $max-width-pc: 450px;
   }
 
   &__clarification {
-    @include bodyText;
     font-size: 12px;
     text-transform: uppercase;
     color: $dark50;
@@ -55,9 +51,9 @@ $max-width-pc: 450px;
 
 .input {
   box-sizing: border-box;
-  @include bodyText;
   width: 100%;
   height: 44px;
+  padding-left: 15px;
 
   &--absolute {
     position: relative;
@@ -68,17 +64,15 @@ $max-width-pc: 450px;
 
     &::placeholder {
       color: $dark25;
-      padding-left: 15px;
     }
   }
 
   &--dropdown {
     border: 1px solid $dark25;
-    background: #FFFFFF;
+    background: $color-white;
 
     &::placeholder {
       color: $dark75;
-      padding-left: 15px;
     }
   }
 
@@ -87,7 +81,6 @@ $max-width-pc: 450px;
 
     &::placeholder {
       color: $dark75;
-      padding-left: 15px;
     }
   }
 
@@ -104,7 +97,6 @@ $max-width-pc: 450px;
 
     &::placeholder {
       color: $dark75;
-      padding-left: 15px;
     }
   }
 }

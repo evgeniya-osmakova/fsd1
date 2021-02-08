@@ -1,37 +1,34 @@
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 10px 20px $dark5;
+}
+
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 20px $dark5;
-  background: white;
-  width: 100vw;
-  height: 70px;
+  justify-content: space-between;
 }
 
 .header__burger {
-  margin-left: 50px;
   cursor: pointer;
 
-  @media (min-width: 1201px) {
+  @include media-breakpoint-up(desktop) {
     display: none;
   }
 }
 
 .header-logo {
-  margin-left: 140px;
-
-  @media (max-width: 1201px) {
-    margin-right: 50px;
-    margin-left: 0;
-  }
+  cursor: pointer;
 }
 
 .header-links {
   display: flex;
-  @include bodyText;
   align-items: center;
 
-  @media (max-width: 1200px) {
+  @include media-breakpoint-down(desktop) {
     display: none;
   }
 }
@@ -56,18 +53,18 @@
 
 .btns {
   display: flex;
-  margin-right: 120px;
 }
 
 .header-button {
-  margin-right: 21px;
+
+  &:not(:last-child) {
+    margin-right: 21px;
+  }
 }
 
 .signs {
-  @include bodyText;
   display: flex;
   align-items: center;
-  margin-right: 140px;
 
   &__line {
     font-weight: 100;

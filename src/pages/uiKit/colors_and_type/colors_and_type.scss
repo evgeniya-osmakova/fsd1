@@ -1,6 +1,3 @@
-//@import '../../main.scss';
-//@import '../../../public/styles/variables';
-
 .colors-text {
   margin-top: 63px;
   margin-left: 150px;
@@ -88,5 +85,24 @@
     justify-content: flex-start;
     flex-direction: column;
     //padding-bottom: 50px;
+  }
+}
+
+
+$status-colors: (
+        primary: #000,
+        success: #27BA6C,
+        info: #03a9f4,
+        warning: #FF8833,
+        danger: #ff1a1a
+);
+
+.message {
+
+  @each $status, $color in $status-colors {
+
+    &--#{$status} {
+      background: $color;
+    }
   }
 }

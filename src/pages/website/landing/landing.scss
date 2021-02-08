@@ -3,19 +3,24 @@
   background-position: bottom;
   height: 830px;
   background-size: cover;
+
+  @include media-breakpoint-down(phone) {
+    background: none;
+  }
 }
 
 .landing-search {
   padding-top: 70px;
-  margin-left: 140px;
 }
 
 .landing-text {
-  @include bodyText;
   color: $dark75;
   text-align: right;
-  margin-right: 135px;
   margin-top: 318px;
   margin-left: auto;
   max-width: 270px;
+
+  @include media-breakpoint-down(phone) {
+    display: none;
+  }
 }

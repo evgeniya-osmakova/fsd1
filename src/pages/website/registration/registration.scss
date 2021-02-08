@@ -6,4 +6,9 @@
   background-position: bottom;
   height: 684px;
   background-size: cover;
+
+  @include media-breakpoint-down(phone) {
+    background: none;
+    margin-top: 20px;
+  }
 }

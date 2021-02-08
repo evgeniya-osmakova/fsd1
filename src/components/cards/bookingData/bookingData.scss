@@ -9,7 +9,7 @@
     padding-left: 30px;
     margin-bottom: 20px;
 
-    @media (max-width: 450px) {
+    @include media-breakpoint-down(phone) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -20,7 +20,7 @@
   &__guests {
     margin-left: 30px;
 
-    @media (max-width: 450px) {
+    @include media-breakpoint-down(phone) {
       margin: auto;
       width: 280px;
     }
@@ -30,7 +30,7 @@
 .arrival {
   margin-right: 20px;
 
-  @media (max-width: 450px) {
+  @include media-breakpoint-down(phone) {
     margin-right: 0;
     margin-bottom: 5px;
   }

@@ -1,9 +1,7 @@
 .signs {
-  @include bodyText;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  //gap: 20px;
 
   &__line {
     font-weight: 100;

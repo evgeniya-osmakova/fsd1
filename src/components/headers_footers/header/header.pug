@@ -1,29 +1,31 @@
 mixin header(type, registrationLink, signInLink)
-  .header
-    i.material-icons.header__burger menu
-    img.header-logo(src="img/logo-big.svg" alt="logo")
-    .header-links
-      p.header-link О нас
-      .icon_down.header-link
-        | Услуги
-        i.material-icons keyboard_arrow_down
-      p.header-link Вакансии
-      p.header-link Новости
-      .icon_down.header-link
-        | Соглашения
-        i.material-icons keyboard_arrow_down
+  .header-wrapper
+    .header.container
+      i.material-icons.header__burger menu
+      a(href='landing.html')
+        img.header-logo(src="img/logo-big.svg" alt="logo")
+      .header-links
+        p.header-link О нас
+        .icon_down.header-link
+          | Услуги
+          i.material-icons keyboard_arrow_down
+        p.header-link Вакансии
+        p.header-link Новости
+        .icon_down.header-link
+          | Соглашения
+          i.material-icons keyboard_arrow_down
 
-      if type === 'before'
-        .btns
-          .header-button
-            a(href=signInLink)
-              +button('button', 'header-btn', false, 'Войти', '', 'small')
-          .header-button
-            a(href=registrationLink)
-              +button('button', 'header-btn', true, 'Зарегистрироваться', '', 'big')
-      else
-        .signs
-          .signs__line.header-link
-            | |
-          .signs__name.header-link
-            | Юлий Цезарь
+        if type === 'before'
+          .btns
+            .header-button
+              a(href=signInLink)
+                +button('button', 'header-btn', false, 'Войти', '', 'small')
+            .header-button
+              a(href=registrationLink)
+                +button('button', 'header-btn', true, 'Зарегистрироваться', '', 'big')
+        else
+          .signs
+            .signs__line.header-link
+              | |
+            .signs__name.header-link
+              | Юлий Цезарь

@@ -6,3 +6,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 140px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-breakpoint-down(desktop) {
+    padding: 0 50px;
+  }
+}

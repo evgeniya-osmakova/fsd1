@@ -8,7 +8,7 @@
   height: 20px;
   box-sizing: border-box;
   position: relative;
-  background: #FFFFFF;
+  background: $color-white;
   background-clip: padding-box;
 
   &--hovered {
@@ -38,7 +38,6 @@
   &__count {
     margin-left: 5px;
     color: $dark25;
-    @include bodyText;
     font-size: 10px;
 
     &--hovered {

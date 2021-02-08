@@ -37,7 +37,12 @@
     @extend .gradient;
     width: 320px;
     height: 44px;
+
+    @include media-breakpoint-down(phone) {
+      width: 250px;
+    }
   }
+
   &--gradient-small {
     @extend .gradient;
     width: 99px;
@@ -90,5 +95,5 @@
 .arrow {
   position: relative;
   right: 34px;
-  color: #FFFFFF;
+  color: $color-white;
 }

@@ -1,4 +1,5 @@
 @import '../public/styles/variables.scss';
+@import '../public/styles/breakpoints.scss';
 @import '../public/styles/common.scss';
 
 @import './components/cards/search/search.scss';
@@ -23,13 +24,12 @@
 @import './components/form_elements/linkBtn/linkBtn.scss';
 @import './components/form_elements/pagination/pagination.scss';
 @import './components/form_elements/numberData/numberData.scss';
-@import './components/form_elements/datepicker/datepicker.scss';
+@import 'components/form_elements/datepicker/datepicker';
 
 @import './components/headers_footers/footer/copyright';
 @import './components/headers_footers/footer/footer.scss';
 @import './components/headers_footers/footer/social.scss';
 @import './components/headers_footers/header/header.scss';
-@import './components/headers_footers/header/headerBefore.scss';
 @import './components/headers_footers/header/headerAfter.scss';
 
 @import 'pages/uiKit/cards/cards.scss';

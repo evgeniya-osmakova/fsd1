@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background: #FFFFFF;
+  background: $color-white;
 
   &__title {
     @include h1Text;

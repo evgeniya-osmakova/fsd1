@@ -12,6 +12,7 @@ mixin bookingData(arrivalDate, departureDate, guests)
           hover: 'regular',
           clarification: '',
           isMasked: false,
+          isDataPicker: true,
         })
       .departure
         +input({
@@ -24,6 +25,7 @@ mixin bookingData(arrivalDate, departureDate, guests)
           hover: 'regular',
           clarification: '',
           isMasked: false,
+          isDataPicker: false,
         })
     .bookingData__guests
       +input({
@@ -36,4 +38,5 @@ mixin bookingData(arrivalDate, departureDate, guests)
         hover: 'regular',
         clarification: '',
         isMasked: false,
+        isDataPicker: false,
       })

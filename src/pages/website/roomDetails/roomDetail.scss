@@ -6,10 +6,6 @@
   color: $dark100;
 }
 
-$max-width-first-point: 1440px;
-$max-width-second-point: 1200px;
-$max-width-third-point: 800px;
-
 .apartments-preview {
   display: flex;
   justify-content: center;
@@ -20,7 +16,7 @@ $max-width-third-point: 800px;
   height: 483px;
   align-items: flex-start;
 
-  @media (max-width: $max-width-third-point) {
+  @include media-breakpoint-down(tablet) {
     height: 350px;
   }
 }
@@ -28,7 +24,7 @@ $max-width-third-point: 800px;
 .big-photo {
   width: 981px;
 
-  @media (max-width: $max-width-first-point) {
+  @include media-breakpoint-down(desktop) {
     display: none;
   }
 }
@@ -38,7 +34,7 @@ $max-width-third-point: 800px;
   &--first {
     position: absolute;
 
-    @media (max-width: $max-width-third-point) {
+    @include media-breakpoint-down(tablet) {
       width: 320px;
     }
   }
@@ -47,22 +43,25 @@ $max-width-third-point: 800px;
     position: relative;
     top: 243px;
 
-    @media (max-width: $max-width-third-point) {
+    @include media-breakpoint-down(tablet) {
       width: 320px;
       top: 200px;
     }
   }
 }
 
+.apartments-wrapper {
+  margin-top: 70px;
+  padding-bottom: 67px;
+  border-bottom: 1px solid $dark25;
+}
+
 .apartments-description {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 70px;
-  padding-bottom: 67px;
-  border-bottom: 1px solid $dark25;
 
-  @media (max-width: $max-width-second-point) {
+  @include media-breakpoint-down(desktop) {
     flex-direction: column;
     align-items: center;
   }
@@ -85,7 +84,7 @@ $max-width-third-point: 800px;
     justify-content: flex-start;
   }
 
-  @media (max-width: $max-width-third-point) {
+  @include media-breakpoint-down(tablet) {
     flex-direction: column;
     align-items: center;
     margin-left: auto;
@@ -120,7 +119,7 @@ $max-width-third-point: 800px;
     align-items: center;
   }
 
-  @media (max-width: $max-width-third-point) {
+  @include media-breakpoint-down(tablet) {
     margin-left: 0;
   }
 }
@@ -141,19 +140,19 @@ $max-width-third-point: 800px;
     margin: auto;
 
     &--great {
-      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      background: $lg-orange;
     }
 
     &--good {
-      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      background: $lg-green;
     }
 
     &--satisfactorily {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $lg-purple;
     }
 
     &--disappointed {
-      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+      background: $lg-black;
     }
   }
 
@@ -169,7 +168,7 @@ $max-width-third-point: 800px;
     align-items: baseline;
     justify-content: space-between;
 
-    @media (max-width: $max-width-third-point) {
+    @include media-breakpoint-down(tablet) {
       flex-direction: column;
       margin-bottom: 30px;
     }
@@ -184,7 +183,7 @@ $max-width-third-point: 800px;
     margin-left: 3px;
   }
 
-  @media (max-width: $max-width-third-point) {
+  @include media-breakpoint-down(tablet) {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -209,7 +208,8 @@ $max-width-third-point: 800px;
   &__rools {
     display: flex;
     flex-direction: column;
-    @media (max-width: $max-width-third-point) {
+
+    @include media-breakpoint-down(phone) {
       margin-bottom: 30px;
     }
   }
@@ -219,12 +219,12 @@ $max-width-third-point: 800px;
     flex-direction: column;
     margin-left: 100px;
 
-    @media (max-width: $max-width-third-point) {
+    @include media-breakpoint-down(tablet) {
       margin-left: 0;
     }
   }
 
-  @media (max-width: $max-width-third-point) {
+  @include media-breakpoint-down(tablet) {
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
@@ -254,12 +254,12 @@ $max-width-third-point: 800px;
 .apartments-booking-block {
   margin-left: 69px;
 
-  @media (max-width: $max-width-second-point) {
+  @include media-breakpoint-down(desktop) {
     margin-left: 0;
     margin-right: 0;
   }
 
-  @media (max-width: $max-width-third-point) {
+  @include media-breakpoint-down(tablet) {
     margin-top: 50px;
   }
 }

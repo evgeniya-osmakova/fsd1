@@ -1,6 +1,6 @@
 mixin signIn ()
   form.signIn
-    .signIn__title
+    h1.signIn__title
       | Войти
     .signIn__email
       +input({
@@ -29,7 +29,7 @@ mixin signIn ()
     .signIn__btn
       +button('submit', 'body-btn', true, 'Войти', '', 'big')
     .signIn__creating-acc.creating-acc
-      .creating-acc__text
+      p.creating-acc__text
         | Нет аккаунта на Toxin?
       .creating-acc__btn
         +button('button', 'body-btn', false, 'создать', '', 'small')
