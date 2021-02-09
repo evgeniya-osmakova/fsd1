@@ -57,29 +57,60 @@
   &__comfort {
     margin-bottom: 25px;
   }
-}
 
-  .rooms-header {
-    @include h3Text;
-    font-size: 24px;
-    color: $dark100;
-    margin-bottom: 30px;
-    margin-right: auto;
-  }
+  &__additional-comfort {
+    &--shown {
+      display: block;
+    }
 
-  .rooms-cards {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-
-    &__card {
-      margin-right: 12px;
-      margin-bottom: 21px;
-      flex: 1;
+    &--hidden {
+      display: none;
     }
   }
+}
 
-  .pages {
-    margin-right: 29px;
+.comfort-dropdown {
+  &--shown {
+    position: absolute;
+    z-index: 3;
   }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.comfort-checkbox {
+  &--shown {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.rooms-header {
+  @include h3Text;
+  font-size: 24px;
+  color: $dark100;
+  margin-bottom: 30px;
+  margin-right: auto;
+}
+
+.rooms-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  &__card {
+    margin-right: 12px;
+    margin-bottom: 21px;
+    flex: 1;
+  }
+}
+
+.pages {
+  margin-right: 29px;
+}
 

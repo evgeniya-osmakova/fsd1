@@ -4,6 +4,7 @@
   border-right: 1px solid $dark50;
   border-radius: 0 0 2px 2px;
   box-shadow: 0 10px 20px $dark5;
+  background: $color-white;
 
   &--small {
     width: 266px;
@@ -84,7 +85,7 @@
     }
   }
 
-  &__simbol {
+  &__symbol {
     position: relative;
     cursor: pointer;
     margin-right: 7px;

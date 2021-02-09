@@ -23,7 +23,7 @@ block content
             size: 'medium',
             placeholder: '3 гостя, 1 младенец',
             arrow: false,
-            dropdown: {existence: true, open: false},
+            dropdown: {existence: true, open: false },
             title: 'гости',
             hover: 'regular',
             clarification: '',
@@ -54,13 +54,30 @@ block content
             size: 'medium',
             placeholder: '2 спальни, 2 кровати...',
             arrow: false,
-            dropdown: {existence: true, open: true},
+            dropdown: {existence: true, open: true },
             title: 'удобства номера',
             hover: 'regular',
             clarification: '',
             isMasked: false,
           })
-        +checkbox({ existence: true, closed: true, data: [] }, 'дополнительные удобства')
+          .comfort-dropdown.comfort-dropdown--hidden
+            +dropdown([{name: 'спальни', count: 2}, {name: 'кровати', count: 2}, {
+              name: 'ванные комнаты',
+              count: 0
+            }], 'small', false, false)
+        .filter.filter__additional-comfort.filter__additional-comfort--shown
+          +checkbox({ existence: true, closed: true, data: [] }, 'дополнительные удобства')
+        .comfort-checkbox.comfort-checkbox--hidden
+          +checkbox({
+            buttons: false, closed: false, data: [
+              {rich: false, header: '', text: 'Завтрак'},
+              {rich: false, header: '', text: 'Письменный стол'},
+              {rich: false, header: '', text: 'Стул для кормления'},
+              {rich: false, header: '', text: 'Кроватка'},
+              {rich: false, header: '', text: 'Телевизор'},
+              {rich: false, header: '', text: 'Шампунь'},
+            ]
+          }, 'дополнительные удобства')
       .search-content__rooms
         .rooms-header
           |Номера, которые мы для вас подобрали

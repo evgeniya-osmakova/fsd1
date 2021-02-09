@@ -24,6 +24,7 @@
   "homepage": "https://github.com/evgeniya-osmakova/fsd1#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "air-datepicker": "^2.2.3",
     "autoprefixer": "^10.0.1",
     "babel-eslint": "^10.1.0",
     "copy-webpack-plugin": "^7.0.0",

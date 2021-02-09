@@ -1,4 +1,5 @@
-mixin button(type, positionInPage, isGradient, text, dim, size)
+mixin button(options)
+  - const { type, positionInPage, isGradient, text, dim, size } = options
   - const gradient = `${positionInPage}--gradient-${size}`
   - const white = `${positionInPage}--white-${size}`
   - const hovered = (dim) ? 'gradient-back--dim' : ''
@@ -9,8 +10,7 @@ mixin button(type, positionInPage, isGradient, text, dim, size)
           |#{text}
       else
         .btn-and-arrow
-          button.btn(class=`${positionInPage} ${gradient}`, type=type)
-            |#{text}
+          input.btn(class=`${positionInPage} ${gradient}`, type=type, value=text)
           i.material-icons.arrow arrow_forward
     else
       .gradient-back(class=hovered)

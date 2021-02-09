@@ -7,7 +7,7 @@ mixin bookingData(arrivalDate, departureDate, guests)
           size: 'xsmall',
           placeholder: arrivalDate,
           arrow: false,
-          dropdown: {existence: true, open: false},
+          dropdown: {existence: true, open: false },
           title: 'прибытие',
           hover: 'regular',
           clarification: '',
@@ -20,7 +20,7 @@ mixin bookingData(arrivalDate, departureDate, guests)
           size: 'xsmall',
           placeholder: departureDate,
           arrow: false,
-          dropdown: {existence: true, open: false},
+          dropdown: {existence: true, open: false },
           title: 'выезд',
           hover: 'regular',
           clarification: '',
@@ -33,10 +33,13 @@ mixin bookingData(arrivalDate, departureDate, guests)
         size: 'big',
         placeholder: guests,
         arrow: false,
-        dropdown: {existence: true, open: false},
+        dropdown: {existence: true, open: false },
         title: 'гости',
         hover: 'regular',
         clarification: '',
         isMasked: false,
         isDataPicker: false,
       })
+      .guests-dropdown.guests-dropdown--hidden
+        +dropdown([{name: 'взрослые', count: 0}, {name: 'дети', count: 0}, {name: 'младенцы', count: 0}],
+          'big', true, true)

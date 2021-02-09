@@ -35,4 +35,11 @@ mixin booking()
       h2.booking-total__text
         |38 081₽
     .booking__btn
-      +button('submit', 'body-btn', true, 'забронировать', '', 'big')
+      +button({
+        type: 'submit',
+        positionInPage: 'body-btn',
+        isGradient: true,
+        text: 'забронировать',
+        dim: '',
+        size: 'big'
+      })

@@ -8,7 +8,7 @@ mixin signIn ()
         size: 'big',
         placeholder: 'Email',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: '',
         hover: 'regular',
         clarification: '',
@@ -20,16 +20,30 @@ mixin signIn ()
         size: 'big',
         placeholder: 'Пароль',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: '',
         hover: 'regular',
         clarification: '',
         isMasked: false,
       })
     .signIn__btn
-      +button('submit', 'body-btn', true, 'Войти', '', 'big')
+      +button({
+        type: 'submit',
+        positionInPage: 'body-btn',
+        isGradient: true,
+        text: 'Войти',
+        dim: '',
+        size: 'big'
+      })
     .signIn__creating-acc.creating-acc
       p.creating-acc__text
         | Нет аккаунта на Toxin?
       .creating-acc__btn
-        +button('button', 'body-btn', false, 'создать', '', 'small')
+        +button({
+          type: 'button',
+          positionInPage: 'body-btn',
+          isGradient: false,
+          text: 'создать',
+          dim: '',
+          size: 'small'
+        })

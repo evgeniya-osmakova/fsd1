@@ -19,10 +19,24 @@ mixin header(type, registrationLink, signInLink)
           .btns
             .header-button
               a(href=signInLink)
-                +button('button', 'header-btn', false, 'Войти', '', 'small')
+                +button({
+                  type: 'button',
+                  positionInPage: 'header-btn',
+                  isGradient: false,
+                  text: 'Войти',
+                  dim: '',
+                  size: 'small'
+                })
             .header-button
               a(href=registrationLink)
-                +button('button', 'header-btn', true, 'Зарегистрироваться', '', 'big')
+                +button({
+                  type: 'button',
+                  positionInPage: 'header-btn',
+                  isGradient: true,
+                  text: 'Зарегистрироваться',
+                  dim: '',
+                  size: 'big'
+                })
         else
           .signs
             .signs__line.header-link

@@ -10,15 +10,15 @@ mixin dropdown(data, size, clear, apply, type)
           .dropdown-item__name.dropdown-item__text
             |#{item.name}
           .dropdown-item__counter
-            .dropdown-item__simbol(data-type='minus')
+            .dropdown-item__symbol(data-type='minus')
               .dropdown-item__modifier(class=dropdownActive(item.count))
-              .dropdown-item__simbol--minus
+              .dropdown-item__symbol--minus
                 |-
             .dropdown-item__count.dropdown-item__text
               |#{item.count}
-            .dropdown-item__simbol(data-type='plus')
+            .dropdown-item__symbol(data-type='plus')
               .dropdown-item__modifier.dropdown-item__modifier--active
-              .dropdown-item__simbol--plus
+              .dropdown-item__symbol--plus
                 |+
       if apply && clear
         .dropdown-menu__btns

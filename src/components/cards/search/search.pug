@@ -1,8 +1,14 @@
 mixin search()
-  form.search
+  form.search(action="search.html")
     h1.search__title
       | Найдём номера под ваши пожелания
     +bookingData('ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ', 'Сколько гостей')
     .search__btn
-      a(href='search.html')
-        +button('submit', 'body-btn', true, 'подобрать номер', '', 'big')
+      +button({
+        type: 'submit',
+        positionInPage: 'body-btn',
+        isGradient: true,
+        text: 'подобрать номер',
+        dim: '',
+        size:'big'
+      })

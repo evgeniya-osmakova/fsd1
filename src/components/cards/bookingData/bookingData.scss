@@ -35,3 +35,15 @@
     margin-bottom: 5px;
   }
 }
+
+.guests-dropdown {
+
+  &--shown {
+    position: absolute;
+    z-index: 3;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

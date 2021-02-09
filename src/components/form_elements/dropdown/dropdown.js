@@ -1,13 +1,11 @@
 const plusCount = document.querySelectorAll('[data-type=plus]');
 const minusCount = document.querySelectorAll('[data-type=minus]');
-const showHideIcon = document.querySelectorAll('[data-type=dropdown]');
 
 [...plusCount].forEach((elem) => {
   elem.addEventListener('click', (event) => {
     event.preventDefault();
     const counter = elem.parentElement.querySelector('.dropdown-item__text');
     const counterValue = counter.innerText;
-    console.log(counterValue);
     counter.innerHTML = String(Number(counterValue) + 1);
     if (Number(counterValue) === 0) {
       const modifier = elem.previousElementSibling.previousElementSibling.querySelector('.dropdown-item__modifier');

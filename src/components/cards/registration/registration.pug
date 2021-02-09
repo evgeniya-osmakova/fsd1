@@ -8,7 +8,7 @@ mixin registration()
         size: 'big',
         placeholder: 'Имя',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: '',
         hover: 'regular',
         clarification: '',
@@ -20,7 +20,7 @@ mixin registration()
         size: 'big',
         placeholder: 'Фамилия',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: '',
         hover: 'regular',
         clarification: '',
@@ -36,7 +36,7 @@ mixin registration()
         size: 'big',
         placeholder: 'ДД.ММ.ГГГГ',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: 'дата рождения',
         hover: 'regular',
         clarification: '',
@@ -48,7 +48,7 @@ mixin registration()
         size: 'big',
         placeholder: 'Email',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: 'данные для входа в сервис',
         hover: 'regular',
         clarification: '',
@@ -60,7 +60,7 @@ mixin registration()
         size: 'big',
         placeholder: 'Пароль',
         arrow: false,
-        dropdown: {existence: false, open: false},
+        dropdown: {existence: false, open: false },
         title: '',
         hover: 'regular',
         clarification: '',
@@ -69,9 +69,23 @@ mixin registration()
     .registration__promo
       +toggle('Получать спецпредложения', false)
     .registration__btn
-      +button('submit', 'body-btn', true, 'зарегистрироваться', '', 'big')
+      +button({
+        type: 'submit',
+        positionInPage: 'body-btn',
+        isGradient: true,
+        text: 'зарегистрироваться',
+        dim: '',
+        size: 'big'
+      })
     .registration__sign-in.sign-in
       p.sign-in__text
         | Уже есть аккаунт на Toxin
       .sign-in__btn
-        +button('button', 'body-btn', false, 'войти', '', 'small')
+        +button({
+          type: 'submit',
+          positionInPage: 'body-btn',
+          isGradient: false,
+          text: 'войти',
+          dim: '',
+          size: 'small'
+        })
